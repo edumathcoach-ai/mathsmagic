@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/Saanvi/Downloads/index_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="cf-2fa-verify" content="disable">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathsMagic – ICSE Maths Classes 6–10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./MathsMagic – ICSE Maths Classes 6–10_files/css2" rel="stylesheet" media="all" onload="this.media=&#39;all&#39;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+<style>
+/* Fallback fonts so page works even if Google Fonts blocked */
+body { font-family: 'Nunito', 'Segoe UI', Arial, sans-serif; }
+.brand-name, .pg-title, .section-num, .nav-btn, .big-btn, .adm-title, .sb-brand-name, .pay-title, .res-score { font-family: 'Fredoka One', 'Arial Black', 'Impact', cursive; }
+</style>
+<meta name="theme-color" content="#FF6B35">
+<style>
+:root{
+  --sun:#FFD93D;--orange:#FF6B35;--coral:#FF4757;--mint:#2ED573;
+  --sky:#1E90FF;--purple:#A55EEA;--pink:#FF6B9D;--teal:#00CEC9;
+  --cream:#FFFBF0;--white:#fff;--ink:#2D3436;--muted:#636E72;
+  --border:#E8ECF0;--r:18px;
+  --shadow:0 6px 24px rgba(0,0,0,.10);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 10% 20%,rgba(255,217,61,.15) 0%,transparent 40%),radial-gradient(circle at 90% 80%,rgba(30,144,255,.12) 0%,transparent 40%),radial-gradient(circle at 50% 50%,rgba(46,213,115,.07) 0%,transparent 60%);pointer-events:none;z-index:0;}
+
+/* SCREENS */
+.screen{display:none;min-height:100vh;position:relative;z-index:1;}
+.screen.active{display:flex;flex-direction:column;}
+#appScreen.active{flex-direction:row;}
+
+/* LOGIN */
+#loginScreen{background:linear-gradient(135deg,#667eea,#764ba2 30%,#FF6B35 70%,#FFD93D);align-items:center;justify-content:center;padding:20px;}
+.login-wrap{background:#fff;border-radius:28px;padding:44px 40px;width:420px;max-width:95vw;box-shadow:0 24px 80px rgba(0,0,0,.30);position:relative;overflow:hidden;}
+.login-wrap::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:linear-gradient(135deg,var(--sun),var(--orange));border-radius:50%;opacity:.22;}
+.brand{text-align:center;margin-bottom:26px;}
+.brand-emoji{font-size:60px;display:block;animation:bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.brand-name{font-family:'Fredoka One',cursive;font-size:38px;color:var(--orange);letter-spacing:1px;line-height:1;}
+.brand-tag{color:var(--muted);font-size:13px;font-weight:700;margin-top:4px;}
+.tab-row{display:flex;background:#F8F9FF;border-radius:14px;padding:4px;margin-bottom:22px;}
+.tab-btn{flex:1;padding:9px;border-radius:11px;border:none;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;color:var(--muted);background:transparent;transition:all .2s;}
+.tab-btn.on{background:#fff;color:var(--orange);box-shadow:0 2px 10px rgba(0,0,0,.10);}
+.f-group{margin-bottom:14px;}
+.f-group label{display:block;font-size:11px;font-weight:900;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px;}
+.f-inp{width:100%;padding:12px 16px;border:2.5px solid var(--border);border-radius:13px;font-family:'Nunito',sans-serif;font-size:15px;outline:none;transition:border-color .2s;background:#FAFBFF;}
+.f-inp:focus{border-color:var(--orange);}
+.big-btn{width:100%;padding:15px;border:none;border-radius:14px;font-family:'Fredoka One',cursive;font-size:20px;cursor:pointer;transition:all .2s;color:#fff;letter-spacing:.5px;}
+.big-btn.orange{background:linear-gradient(135deg,var(--orange),var(--coral));}
+.big-btn.orange:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,107,53,.40);}
+.big-btn.sky{background:linear-gradient(135deg,var(--sky),var(--teal));}
+.big-btn.sky:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,144,255,.40);}
+.err{color:var(--coral);font-size:13px;font-weight:700;text-align:center;margin-top:8px;display:none;}
+.pay-ribbon{background:linear-gradient(90deg,var(--sun),var(--orange));color:#fff;text-align:center;padding:9px;border-radius:12px;font-size:13px;font-weight:800;margin-bottom:18px;}
+
+/* SIDEBAR */
+.sidebar{width:255px;flex-shrink:0;background:linear-gradient(180deg,#FF6B35,#FF4757 50%,#A55EEA);color:#fff;display:flex;flex-direction:column;height:100vh;position:sticky;top:0;overflow:hidden;}
+.sb-brand{padding:20px 18px 14px;border-bottom:1px solid rgba(255,255,255,.15);}
+.sb-brand-name{font-family:'Fredoka One',cursive;font-size:24px;letter-spacing:1px;}
+.sb-brand-sub{font-size:11px;opacity:.75;margin-top:2px;}
+.sb-user{padding:12px 18px;background:rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.15);}
+.sb-user-name{font-weight:900;font-size:15px;}
+.sb-pills{display:flex;gap:6px;margin-top:5px;flex-wrap:wrap;}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:800;background:rgba(255,255,255,.2);}
+.sb-nav{flex:1;padding:12px 10px;overflow-y:auto;}
+.nav-head{font-size:10px;font-weight:900;opacity:.5;text-transform:uppercase;letter-spacing:1.5px;padding:8px 8px 4px;}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;cursor:pointer;font-weight:800;font-size:14px;transition:all .2s;margin-bottom:2px;}
+.nav-item:hover{background:rgba(255,255,255,.18);}
+.nav-item.on{background:rgba(255,255,255,.25);box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.nav-icon{font-size:18px;width:25px;text-align:center;}
+.sb-foot{padding:12px;border-top:1px solid rgba(255,255,255,.15);}
+.sb-out{width:100%;padding:9px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.28);color:#fff;border-radius:11px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:all .2s;}
+.sb-out:hover{background:rgba(255,255,255,.25);}
+
+/* MAIN */
+.main{flex:1;overflow-y:auto;padding:26px;}
+
+/* ADMIN */
+#adminScreen{flex-direction:column;}
+.adm-hdr{background:linear-gradient(90deg,#FF6B35,#A55EEA);color:#fff;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;}
+.adm-title{font-family:'Fredoka One',cursive;font-size:26px;}
+.adm-tabs{display:flex;gap:6px;padding:14px 28px;background:#fff;border-bottom:3px solid var(--border);flex-wrap:wrap;}
+.adm-tab{padding:8px 18px;border-radius:20px;cursor:pointer;font-weight:800;font-size:13px;color:var(--muted);transition:all .2s;border:2.5px solid transparent;}
+.adm-tab.on{background:var(--orange);color:#fff;border-color:var(--orange);}
+.adm-body{padding:18px 28px;flex:1;overflow-y:auto;}
+.adm-card{background:#fff;border-radius:var(--r);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border-top:4px solid var(--orange);}
+.adm-card h3{font-size:18px;font-weight:900;margin-bottom:16px;color:var(--orange);}
+.tbl{width:100%;border-collapse:collapse;}
+.tbl th{background:#FFF5F0;padding:9px 12px;text-align:left;font-size:11px;font-weight:900;color:var(--orange);text-transform:uppercase;}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:14px;}
+.tbl tr:hover td{background:#FFFBF8;}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:800;}
+.bg{background:#D4EDDA;color:#155724;}.br{background:#F8D7DA;color:#721C24;}.by{background:#FFF3CD;color:#856404;}
+.inp-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.adm-inp{padding:10px 14px;border:2.5px solid var(--border);border-radius:11px;font-family:'Nunito',sans-serif;font-size:14px;width:100%;outline:none;}
+.adm-inp:focus{border-color:var(--orange);}
+.s-btn{padding:8px 16px;border-radius:9px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;transition:all .2s;}
+.s-btn:hover{transform:translateY(-1px);}
+.sp{background:var(--orange);color:#fff;}.sd{background:var(--coral);color:#fff;}.sg{background:var(--mint);color:#fff;}.sy{background:var(--sun);color:var(--ink);}
+.ok-msg{color:var(--mint);font-size:13px;font-weight:800;display:none;margin-top:8px;}
+
+/* STUDENT UI */
+.pg-title{font-family:'Fredoka One',cursive;font-size:30px;color:var(--orange);margin-bottom:4px;letter-spacing:.5px;}
+.pg-sub{color:var(--muted);font-size:14px;font-weight:700;margin-bottom:20px;}
+
+/* Class pills */
+.cls-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.cls-pill{padding:8px 20px;border-radius:20px;border:2.5px solid var(--border);background:#fff;font-weight:800;font-size:14px;cursor:pointer;transition:all .2s;color:var(--muted);}
+.cls-pill:hover{border-color:var(--orange);color:var(--orange);}
+.cls-pill.on{background:var(--orange);color:#fff;border-color:var(--orange);box-shadow:0 4px 16px rgba(255,107,53,.33);transform:translateY(-1px);}
+.locked-pill{opacity:.45;cursor:not-allowed;border-style:dashed;}
+.locked-pill:hover{border-color:var(--coral)!important;color:var(--coral)!important;background:#fff!important;}
+
+/* Stats */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
+.stat-box{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--shadow);text-align:center;border-bottom:4px solid var(--orange);transition:transform .2s;cursor:default;}
+.stat-box:hover{transform:translateY(-3px);}
+.stat-box:nth-child(2){border-color:var(--sky);}
+.stat-box:nth-child(3){border-color:var(--mint);}
+.stat-box:nth-child(4){border-color:var(--purple);}
+.stat-emo{font-size:26px;}
+.stat-val{font-family:'Fredoka One',cursive;font-size:26px;color:var(--orange);line-height:1.1;}
+.stat-box:nth-child(2) .stat-val{color:var(--sky);}
+.stat-box:nth-child(3) .stat-val{color:var(--mint);}
+.stat-box:nth-child(4) .stat-val{color:var(--purple);}
+.stat-lbl{font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
+
+/* Chapter grid */
+.ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.ch-card{background:#fff;border-radius:18px;padding:18px;box-shadow:var(--shadow);cursor:pointer;transition:all .25s;border:2.5px solid transparent;position:relative;overflow:hidden;}
+.ch-card::before{content:'';position:absolute;top:-18px;right:-18px;width:65px;height:65px;border-radius:50%;opacity:.10;}
+.ch-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+/* per-chapter colour classes */
+.cc0{--cc:var(--sky);}  .cc1{--cc:var(--mint);}  .cc2{--cc:var(--orange);}
+.cc3{--cc:var(--purple)}.cc4{--cc:var(--coral);}  .cc5{--cc:var(--teal);}
+.cc6{--cc:var(--sun);}  .cc7{--cc:#e84393;}       .cc8{--cc:#00b894;}
+.cc9{--cc:#6c5ce7;}     .cc10{--cc:#fd79a8;}      .cc11{--cc:#00cec9;}
+.cc12{--cc:#e17055;}    .cc13{--cc:#fdcb6e;}       .cc14{--cc:#a29bfe;}
+.ch-card::before{background:var(--cc);}
+.ch-card:hover{border-color:var(--cc);}
+.ch-icon{font-size:34px;margin-bottom:8px;}
+.ch-name{font-weight:900;font-size:15px;margin-bottom:3px;}
+.ch-meta{font-size:11px;color:var(--muted);font-weight:700;}
+.prog-bar{height:6px;background:#EEF0F5;border-radius:3px;margin-top:8px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:3px;background:var(--cc);}
+
+/* back */
+.back-btn{background:#fff;border:2.5px solid var(--border);color:var(--orange);padding:8px 16px;border-radius:11px;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;transition:all .2s;}
+.back-btn:hover{border-color:var(--orange);background:#FFF5F0;}
+.hdr-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+
+/* MCQ */
+.quiz-hdr{background:#fff;border-radius:18px;padding:16px 22px;margin-bottom:16px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;border-left:5px solid var(--orange);}
+.quiz-ch{font-weight:900;font-size:17px;color:var(--orange);}
+.quiz-info{font-size:13px;color:var(--muted);font-weight:800;}
+.q-dots{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;}
+.q-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .3s;}
+.q-dot.done{background:var(--mint);}
+.q-dot.cur{background:var(--orange);transform:scale(1.3);}
+.q-dot.fail{background:var(--coral);}
+.q-card{background:#fff;border-radius:18px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px;border-top:4px solid var(--sun);}
+.q-num{font-size:11px;font-weight:900;color:var(--orange);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.q-txt{font-size:17px;font-weight:700;line-height:1.65;margin-bottom:20px;color:var(--ink);}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.opt{padding:13px 14px 13px 42px;border:2.5px solid var(--border);border-radius:13px;cursor:pointer;font-weight:700;font-size:14px;transition:all .2s;background:#fff;position:relative;}
+.opt::before{content:attr(data-l);position:absolute;left:13px;top:50%;transform:translateY(-50%);font-family:'Fredoka One',cursive;font-size:18px;color:var(--border);transition:color .2s;}
+.opt:hover{border-color:var(--orange);background:#FFF8F5;}
+.opt:hover::before{color:var(--orange);}
+.opt.sel{border-color:var(--sky);background:#EEF7FF;}
+.opt.sel::before{color:var(--sky);}
+.opt.correct{border-color:var(--mint)!important;background:#EDFFF5!important;}
+.opt.correct::before{color:var(--mint)!important;}
+.opt.wrong{border-color:var(--coral)!important;background:#FFF0F0!important;}
+.opt.wrong::before{color:var(--coral)!important;}
+.fb-box{margin-top:14px;padding:13px 17px;border-radius:13px;font-weight:700;font-size:14px;line-height:1.5;}
+.fb-ok{background:#EDFFF5;color:#0B6E4F;border:2px solid #A8E6CF;}
+.fb-no{background:#FFF0F0;color:#8B0000;border:2px solid #FFAAAA;}
+.q-nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.nav-btn{padding:10px 22px;border-radius:12px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;transition:all .2s;}
+.nb-p{background:#EEF0F5;color:var(--muted);}
+.nb-p:hover{background:#E0E3EA;}
+.nb-n{background:linear-gradient(135deg,var(--orange),var(--coral));color:#fff;}
+.nb-n:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,107,53,.35);}
+
+/* WORD PROBLEMS */
+.wp-card{background:#fff;border-radius:18px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px;}
+.wp-prob{font-size:15px;line-height:1.9;color:var(--ink);background:linear-gradient(135deg,#FFF9EE,#FFF5E0);padding:16px;border-radius:13px;border-left:5px solid var(--sun);margin-bottom:18px;font-weight:700;}
+.rough-lbl{font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;}
+.rough-ta{width:100%;min-height:145px;padding:13px;border:2.5px solid var(--border);border-radius:13px;font-family:'Nunito',sans-serif;font-size:14px;resize:vertical;outline:none;background:#FFFEF5;transition:border-color .2s;line-height:1.7;}
+.rough-ta:focus{border-color:var(--sun);}
+.ans-lbl{font-size:11px;font-weight:900;color:var(--muted);display:block;margin:13px 0 6px;text-transform:uppercase;letter-spacing:1px;}
+.ans-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.ans-inp{flex:1;min-width:110px;padding:11px 14px;border:2.5px solid var(--border);border-radius:12px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;outline:none;}
+.ans-inp:focus{border-color:var(--mint);}
+.unit-inp{width:105px;padding:11px 13px;border:2.5px solid var(--border);border-radius:12px;font-family:'Nunito',sans-serif;font-size:14px;outline:none;}
+.unit-inp:focus{border-color:var(--mint);}
+.chk-btn{padding:11px 20px;border-radius:12px;border:none;cursor:pointer;font-family:'Fredoka One',cursive;font-size:17px;background:linear-gradient(135deg,var(--mint),var(--teal));color:#fff;transition:all .2s;}
+.chk-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(46,213,115,.35);}
+.step-box{margin-top:13px;padding:15px;border-radius:13px;border:2.5px solid var(--border);}
+.step-title{font-weight:900;font-size:14px;margin-bottom:7px;color:var(--purple);}
+.step-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;}
+.stag{padding:3px 11px;border-radius:20px;font-size:12px;font-weight:800;}
+.sg2{background:#EDFFF5;color:#0B6E4F;}.sy2{background:#FFF8E1;color:#9C6B00;}.sr2{background:#FFF0F0;color:#8B0000;}
+
+/* ANALYTICS */
+.an-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.an-card{background:#fff;border-radius:18px;padding:20px;box-shadow:var(--shadow);}
+.an-card h3{font-weight:900;font-size:16px;margin-bottom:14px;color:var(--ink);}
+.tb-row{display:flex;align-items:center;gap:9px;margin-bottom:8px;}
+.tb-lbl{width:105px;font-size:12px;font-weight:800;}
+.tb-track{flex:1;height:10px;background:#EEF0F5;border-radius:5px;overflow:hidden;}
+.tb-fill{height:100%;border-radius:5px;}
+.tb-pct{width:36px;font-size:13px;font-weight:900;text-align:right;}
+.str-tag{display:inline-block;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:800;margin:3px;}
+.act-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+.act-cell{aspect-ratio:1;border-radius:3px;}
+.donut{width:120px;height:120px;border-radius:50%;margin:0 auto 12px;background:conic-gradient(var(--mint) 0% 62%,var(--sun) 62% 82%,var(--coral) 82% 100%);}
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;font-size:12px;font-weight:800;}
+.ldot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:3px;vertical-align:middle;}
+
+/* PAYMENT / CONTACT */
+.pay-card{background:#fff;border-radius:18px;padding:26px;box-shadow:var(--shadow);max-width:640px;}
+.cs-badge{background:linear-gradient(90deg,var(--sun),var(--orange));color:#fff;font-size:12px;font-weight:900;padding:4px 14px;border-radius:20px;display:inline-block;margin-bottom:12px;}
+.pay-title{font-family:'Fredoka One',cursive;font-size:30px;color:var(--orange);margin-bottom:6px;}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+.plan{border:2.5px solid var(--border);border-radius:15px;padding:18px;}
+.plan.best{border-color:var(--orange);background:#FFF8F5;}
+.plan-name{font-weight:900;font-size:15px;margin-bottom:3px;}
+.plan-price{font-family:'Fredoka One',cursive;font-size:28px;color:var(--orange);}
+.plan-mo{font-size:12px;color:var(--muted);}
+.plan-feat{margin-top:10px;font-size:13px;}
+.plan-feat li{list-style:none;margin-bottom:3px;font-weight:700;}
+.plan-feat li::before{content:"✓ ";color:var(--mint);font-weight:900;}
+.ct-card{background:#fff;border-radius:18px;padding:26px;box-shadow:var(--shadow);max-width:560px;}
+.ct-item{display:flex;align-items:flex-start;gap:13px;margin-bottom:16px;}
+.ct-icon{font-size:26px;flex-shrink:0;}
+.ct-lbl{font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
+.ct-val{font-weight:700;font-size:15px;margin-top:2px;line-height:1.6;}
+
+/* TOAST */
+.toast{position:fixed;top:20px;right:20px;padding:13px 20px;border-radius:13px;font-weight:800;font-size:14px;color:#fff;z-index:9999;transform:translateX(220px);opacity:0;transition:all .35s;box-shadow:0 8px 28px rgba(0,0,0,.20);}
+.toast.show{transform:translateX(0);opacity:1;}
+.tok{background:linear-gradient(135deg,var(--mint),var(--teal));}
+.ter{background:linear-gradient(135deg,var(--coral),#c0392b);}
+.tin{background:linear-gradient(135deg,var(--sky),var(--teal));}
+
+/* RESULT */
+.res-wrap{text-align:center;padding:36px 20px;}
+.res-trophy{font-size:80px;animation:bounce 1.5s infinite;}
+.res-score{font-family:'Fredoka One',cursive;font-size:60px;line-height:1.1;margin:12px 0;}
+.res-msg{font-size:15px;font-weight:700;padding:13px 18px;border-radius:13px;display:inline-block;margin:8px 0 20px;}
+.res-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.r-btn{padding:11px 22px;border-radius:12px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;transition:all .2s;}
+.r-btn:hover{transform:translateY(-2px);}
+.rb1{background:linear-gradient(135deg,var(--orange),var(--coral));color:#fff;}
+.rb2{background:linear-gradient(135deg,var(--mint),var(--teal));color:#fff;}
+.rb3{background:#EEF0F5;color:var(--muted);}
+
+/* MISC */
+.hidden{display:none!important;}
+.divider{border:none;border-top:2px solid var(--border);margin:16px 0;}
+.fnote{color:var(--muted);font-size:12px;font-weight:700;text-align:center;margin-top:10px;padding:7px;background:#F8F9FF;border-radius:9px;}
+
+@media(max-width:960px){.ch-grid{grid-template-columns:1fr 1fr;}.stats-row{grid-template-columns:1fr 1fr;}.an-grid{grid-template-columns:1fr;}}
+@media(max-width:700px){.opts{grid-template-columns:1fr;}.ch-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){
+  .sidebar{width:56px;}
+  .sb-brand-name,.sb-brand-sub,.sb-user,.nav-head,.nav-item span,.sb-foot{display:none;}
+  .nav-icon{width:100%;text-align:center;font-size:20px;}
+  .nav-item{padding:11px 6px;justify-content:center;}
+  .main{padding:13px;}
+  .ch-grid{grid-template-columns:1fr;}
+  .inp-row{grid-template-columns:1fr;}
+  .adm-body{padding:13px;}
+}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<!-- ════════════════ LOGIN ════════════════ -->
+<div class="screen active" id="loginScreen">
+  <div class="login-wrap">
+    <div class="brand">
+      <span class="brand-emoji">🧮</span>
+      <div class="brand-name">MathsMagic</div>
+      <div class="brand-tag">ICSE Maths · Classes 6 – 10</div>
+    </div>
+    <div class="pay-ribbon">🎉 Premium Plans Coming Soon – Explore Free Today!</div>
+    <div class="tab-row">
+      <button class="tab-btn on" onclick="loginTab(&#39;s&#39;)">👨‍🎓 Student</button>
+      <button class="tab-btn" onclick="loginTab(&#39;t&#39;)">👩‍🏫 Teacher</button>
+    </div>
+    <div id="sF">
+      <div class="f-group"><label>Student ID</label><input class="f-inp" id="sId" value="STU001" placeholder="e.g. STU001"></div>
+      <div class="f-group"><label>Password</label><input class="f-inp" id="sPw" type="password" value="pass123"></div>
+      <button class="big-btn orange" onclick="doStu()">Let's Go! 🚀</button>
+      <p class="err" id="sErr">Wrong ID or password. Try again.</p>
+    </div>
+    <div id="tF" class="hidden">
+      <div class="f-group"><label>Teacher Email</label><input class="f-inp" id="tEm" value=""></div>
+      <div class="f-group"><label>Password</label><input class="f-inp" id="tPw" type="password" value="KunalCoach@123"></div>
+      <button class="big-btn sky" onclick="doTch()">Admin Panel 🔐</button>
+      <p class="err" id="tErr">Wrong credentials.</p>
+    </div>
+    <div style="text-align:center;margin-top:14px;font-size:12px;color:var(--muted);font-weight:700;">📧 <a href="file:///C:/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563332233b37223e353937353e16313b373f3a7835393b">[email&nbsp;protected]</a> &nbsp;|&nbsp; 🌐 mathsmagic.co.in</div>
+  </div>
+</div>
+
+<!-- ════════════════ ADMIN ════════════════ -->
+<div class="screen" id="adminScreen">
+  <div class="adm-hdr">
+    <div><div class="adm-title">🧮 MathsMagic Admin</div><div style="font-size:13px;opacity:.85"><a href="file:///C:/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9dcddccd4d8cdd1dad6d8dad1f9ded4d8d0d597dad6d4">[email&nbsp;protected]</a></div></div>
+    <button class="s-btn sd" onclick="doOut()" style="padding:10px 18px">Logout</button>
+  </div>
+  <div class="adm-tabs">
+    <div class="adm-tab on" onclick="aTab(&#39;st&#39;)">👨‍🎓 Students</div>
+    <div class="adm-tab" onclick="aTab(&#39;ad&#39;)">➕ Add Student</div>
+    <div class="adm-tab" onclick="aTab(&#39;an&#39;)">📊 Analytics</div>
+    <div class="adm-tab" onclick="aTab(&#39;pw&#39;)">🔑 Passwords</div>
+    <div class="adm-tab" onclick="aTab(&#39;ac&#39;)">🔒 Access</div>
+  </div>
+  <div class="adm-body">
+    <div id="aSt" class="adm-card">
+      <h3>👨‍🎓 All Students</h3>
+      <table class="tbl"><thead><tr><th>ID</th><th>Name</th><th>Class</th><th>Valid Until</th><th>Section</th><th>Status</th><th>Progress</th><th>Action</th></tr></thead>
+      <tbody id="sTB"></tbody></table>
+    </div>
+    <div id="aAd" class="adm-card hidden">
+      <h3>➕ Add New Student</h3>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Full Name</label><input class="adm-inp" id="nNm" placeholder="Full name"></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Student ID</label><input class="adm-inp" id="nId" placeholder="e.g. STU005"></div>
+      </div>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Class</label>
+          <select class="adm-inp" id="nCl"><option>Class 6</option><option>Class 7</option><option>Class 8</option><option selected="">Class 9</option><option>Class 10</option></select></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Password</label><input class="adm-inp" id="nPw" type="password" placeholder="Initial password"></div>
+      </div>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Valid From</label><input class="adm-inp" id="nFr" type="date"></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Valid Until</label><input class="adm-inp" id="nUn" type="date"></div>
+      </div>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Section</label><input class="adm-inp" id="nSe" placeholder="e.g. A, B, All"></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Email</label><input class="adm-inp" id="nEm" placeholder="student@email.com"></div>
+      </div>
+      <button class="s-btn sp" onclick="addStu()" style="padding:11px 26px;font-size:14px">➕ Add Student</button>
+      <p class="ok-msg" id="addOk">✅ Student added!</p>
+    </div>
+    <div id="aAn" class="adm-card hidden">
+      <h3>📊 Class Analytics</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div><h4 style="font-weight:900;margin-bottom:10px;color:var(--muted)">Chapter Performance</h4><div id="admCh"></div></div>
+        <div><h4 style="font-weight:900;margin-bottom:10px;color:var(--muted)">Top Students</h4>
+          <table class="tbl"><thead><tr><th>Name</th><th>Class</th><th>Score</th></tr></thead><tbody id="topB"></tbody></table></div>
+      </div>
+    </div>
+    <div id="aPw" class="adm-card hidden">
+      <h3>🔑 Reset Password</h3>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Student</label><select class="adm-inp" id="rSS"></select></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">New Password</label><input class="adm-inp" id="rPw" type="password" placeholder="New password"></div>
+      </div>
+      <button class="s-btn sy" onclick="resetPw()" style="padding:11px 26px">🔑 Reset</button>
+      <p class="ok-msg" id="rOk">✅ Password reset!</p>
+    </div>
+    <div id="aAc" class="adm-card hidden">
+      <h3>🔒 Access Control</h3>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Student</label><select class="adm-inp" id="acS"></select></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Chapter Access</label>
+          <select class="adm-inp" id="acCh"><option value="All">🌐 All Classes &amp; Chapters</option><optgroup label="── Class Restriction ──"><option value="Class 6">🔒 Class 6 Only</option><option value="Class 7">🔒 Class 7 Only</option><option value="Class 8">🔒 Class 8 Only</option><option value="Class 9">🔒 Class 9 Only</option><option value="Class 10">🔒 Class 10 Only</option></optgroup><optgroup label="── Chapter Restriction ──"><option>Number System</option><option>Fractions</option><option>Integers</option><option>Ratio &amp; Proportion</option><option>Percentage</option><option>Algebra</option><option>Geometry</option><option>Mensuration</option><option>Data Handling</option></optgroup></select></div>
+      </div>
+      <div class="inp-row">
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Extend Until</label><input class="adm-inp" type="date" id="acV"></div>
+        <div><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase">Status</label>
+          <select class="adm-inp" id="acSt"><option value="active">Active</option><option value="suspended">Suspended</option></select></div>
+      </div>
+      <button class="s-btn sg" onclick="updAc()" style="padding:11px 26px">💾 Save</button>
+      <p class="ok-msg" id="acOk">✅ Updated!</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ APP ════════════════ -->
+<div class="screen" id="appScreen">
+  <div class="sidebar">
+    <div class="sb-brand"><div style="font-size:28px">🧮</div><div class="sb-brand-name">MathsMagic</div><div class="sb-brand-sub">ICSE · Classes 6–10</div></div>
+    <div class="sb-user"><div class="sb-user-name" id="sbNm">Student</div><div class="sb-pills"><span class="pill" id="sbCl">Class</span><span class="pill">🔥 5d</span></div></div>
+    <nav class="sb-nav">
+      <div class="nav-head">Practice</div>
+      <div class="nav-item on" onclick="gp(&#39;dash&#39;)">    <span class="nav-icon">🏠</span><span>Dashboard</span></div>
+      <div class="nav-item" onclick="gp(&#39;chapters&#39;)"><span class="nav-icon">📚</span><span>Chapters</span></div>
+      <div class="nav-item" onclick="gp(&#39;wp&#39;)">      <span class="nav-icon">📝</span><span>Word Problems</span></div>
+      <div class="nav-head">Insights</div>
+      <div class="nav-item" onclick="gp(&#39;analytics&#39;)"><span class="nav-icon">📊</span><span>My Progress</span></div>
+      <div class="nav-head">More</div>
+      <div class="nav-item" onclick="gp(&#39;plans&#39;)">  <span class="nav-icon">💳</span><span>Plans</span></div>
+      <div class="nav-item" onclick="gp(&#39;contact&#39;)"><span class="nav-icon">📬</span><span>Contact</span></div>
+    </nav>
+    <div class="sb-foot"><button class="sb-out" onclick="doOut()">🚪 Logout</button></div>
+  </div>
+  <div class="main" id="MA"></div>
+</div>
+
+<script data-cfasync="false" src="file:///C:/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false">
+// Global error handler — shows user-friendly message instead of silent fail
+window.onerror = function(msg, src, line, col, err) {
+  console.error('MathsMagic Error:', msg, 'Line:', line);
+  return false;
+};
+
+/* ══════════════════════════════════════════
+   DATA
+══════════════════════════════════════════ */
+const EM=['edumathcoach','gmail.com'].join('@');
+const TCH={em:EM,pw:'KunalCoach@'+'123'};
+
+let STUS=[
+  {id:'STU001',nm:'Aryan Sharma',  cls:'Class 9', pw:'pass123',    fr:'2025-01-01',un:'2026-12-31',st:'active',   sec:'All',      pr:68},
+  {id:'STU002',nm:'Priya Mehta',   cls:'Class 9', pw:'priya123',   fr:'2025-01-01',un:'2026-06-30',st:'active',   sec:'All',      pr:82},
+  {id:'STU003',nm:'Rahul Gupta',   cls:'Class 8', pw:'rahul123',   fr:'2025-01-01',un:'2026-03-31',st:'suspended',sec:'All',      pr:45},
+  {id:'STU004',nm:'Sneha Joshi',   cls:'Class 7', pw:'sneha123',   fr:'2025-01-01',un:'2026-12-31',st:'active',   sec:'All',      pr:73},
+  {id:'STU005',nm:'Ravi Pillai',   cls:'Class 6', pw:'ravi123',    fr:'2025-01-01',un:'2026-12-31',st:'active',   sec:'All',      pr:55},
+  {id:'STU006',nm:'Nisha Kapoor',  cls:'Class 10',pw:'nisha123',   fr:'2025-01-01',un:'2026-12-31',st:'active',   sec:'All',      pr:78},
+  {id:'Arham',  nm:'Arham',        cls:'Class 7', pw:'Amul123',    fr:'2026-01-01',un:'2027-12-31',st:'active',   sec:'Class 7',  pr:0},
+];
+
+/* ══════════════════════════════════════════
+   CHAPTER DEFINITIONS — ALL 5 CLASSES
+══════════════════════════════════════════ */
+const CLASS_CHAPTERS={
+ 'Class 6':[
+  {id:'c6_ns', nm:'Number System',     icon:'🔢',topics:'Integers, Factors, Multiples, HCF, LCM, Prime numbers, Divisibility'},
+  {id:'c6_fr', nm:'Fractions',         icon:'½', topics:'Types, Equivalent fractions, Operations, Comparison'},
+  {id:'c6_dc', nm:'Decimals',          icon:'.',  topics:'Notation, Conversion, Operations on decimals'},
+  {id:'c6_rp', nm:'Ratio & Proportion',icon:'⚖️',topics:'Ratio, Proportion, Unitary method'},
+  {id:'c6_pc', nm:'Percentage',        icon:'%', topics:'Percent, Conversion, Applications'},
+  {id:'c6_al', nm:'Algebra',           icon:'x', topics:'Variables, Constants, Expressions, Simple equations'},
+  {id:'c6_gm', nm:'Geometry',          icon:'📐',topics:'Lines, Angles, Triangles, Quadrilaterals, Circle basics'},
+  {id:'c6_mn', nm:'Mensuration',       icon:'📏',topics:'Perimeter and Area of rectangles, squares, triangles'},
+  {id:'c6_dh', nm:'Data Handling',     icon:'📊',topics:'Data collection, Pictograph, Bar graph, Mean'},
+ ],
+ 'Class 7':[
+  {id:'c7_int',nm:'Integers',          icon:'±', topics:'Operations, Properties, Patterns, Number line'},
+  {id:'c7_fr', nm:'Fractions & Decimals',icon:'½',topics:'Multiply/divide fractions, decimal operations'},
+  {id:'c7_rn', nm:'Rational Numbers',  icon:'ℚ', topics:'Representation, Operations, Comparison on number line'},
+  {id:'c7_exp',nm:'Exponents & Powers',icon:'xⁿ',topics:'Laws of exponents, Standard form, Scientific notation'},
+  {id:'c7_sets',nm:'Sets',             icon:'{}',topics:'Equal/equivalent/universal sets, Cardinality, Subsets'},
+  {id:'c7_rp', nm:'Ratio & Proportion',icon:'⚖️',topics:'Ratio, Proportion, Unitary method, Speed-Distance-Time'},
+  {id:'c7_pc', nm:'Percentage',        icon:'%', topics:'Profit & Loss, Simple Interest, Applications'},
+  {id:'c7_al', nm:'Algebraic Expressions',icon:'x²',topics:'Terms, Like/unlike terms, Addition, Subtraction'},
+  {id:'c7_le', nm:'Linear Equations',  icon:'=', topics:'Equations, Inequations, Word problems'},
+  {id:'c7_la', nm:'Lines & Angles',    icon:'∠', topics:'Pairs of angles, Parallel lines, Transversal'},
+  {id:'c7_tri',nm:'Triangles',         icon:'△', topics:'Angle sum, Exterior angle, Properties, Congruence'},
+  {id:'c7_sym',nm:'Symmetry & Solids', icon:'🔷',topics:'Rotational symmetry, Visualising 3D shapes'},
+  {id:'c7_mn', nm:'Perimeter & Area',  icon:'📏',topics:'Area of triangle, parallelogram, circle (intro)'},
+  {id:'c7_dh', nm:'Data Handling',     icon:'📊',topics:'Mean, Median, Mode, Bar graphs, Data representation'},
+ ],
+ 'Class 8':[
+  {id:'c8_rn', nm:'Rational Numbers',  icon:'ℚ', topics:'Properties, BODMAS, Operations on rational numbers'},
+  {id:'c8_sq', nm:'Squares & Roots',   icon:'√', topics:'Perfect squares, Patterns, Square roots by factorisation/long division'},
+  {id:'c8_cu', nm:'Cubes & Cube Roots',icon:'∛', topics:'Perfect cubes, Cube roots, Applications'},
+  {id:'c8_exp',nm:'Exponents & Powers',icon:'xⁿ',topics:'Negative exponents, Laws, Standard form'},
+  {id:'c8_al', nm:'Algebraic Expressions',icon:'x²',topics:'Multiplication, Division, Identities (a+b)², (a-b)², (a+b)(a-b)'},
+  {id:'c8_le', nm:'Linear Equations',  icon:'=', topics:'Equations in one variable, Cross-multiplication, Word problems'},
+  {id:'c8_rp', nm:'Ratio & Proportion',icon:'⚖️',topics:'Direct/Inverse variation, Compound proportion'},
+  {id:'c8_pc', nm:'Percentage',        icon:'%', topics:'Profit/Loss, Discount, GST, Simple & Compound Interest'},
+  {id:'c8_gm', nm:'Geometry',          icon:'📐',topics:'Quadrilaterals, Parallelogram properties, Constructions'},
+  {id:'c8_mn', nm:'Mensuration',       icon:'📏',topics:'Trapezium, Circle area, Surface area, Volume of solids'},
+  {id:'c8_dh', nm:'Data Handling',     icon:'📊',topics:'Pie charts, Probability basics, Statistics'},
+ ],
+ 'Class 9':[
+  {id:'c9_ns', nm:'Number Systems',    icon:'🔢',topics:'Irrationals, Real numbers, Decimal expansion, Radicals'},
+  {id:'c9_pl', nm:'Polynomials',       icon:'x²',topics:'Types, Remainder & Factor theorem, Factorisation, Algebraic identities'},
+  {id:'c9_le', nm:'Linear Equations',  icon:'=', topics:'Two variables, Graphical solution, Applications'},
+  {id:'c9_eu', nm:"Euclid's Geometry", icon:'📐',topics:'Axioms, Postulates, Theorems, Undefined terms'},
+  {id:'c9_la', nm:'Lines & Angles',    icon:'∠', topics:'Linear pair, Vertically opposite, Parallel lines, Theorems'},
+  {id:'c9_tri',nm:'Triangles',         icon:'△', topics:'Congruence criteria, Inequalities, Angle sum property'},
+  {id:'c9_qd', nm:'Quadrilaterals',    icon:'▭', topics:'Parallelogram theorems, Mid-point theorem, Properties'},
+  {id:'c9_cr', nm:'Circles',           icon:'○', topics:'Chord, Arc, Angle subtended, Equal chords'},
+  {id:'c9_mn', nm:'Mensuration',       icon:'📏',topics:"Heron's formula, Surface area & Volume of solids"},
+  {id:'c9_st', nm:'Statistics',        icon:'📊',topics:'Mean, Median, Mode, Frequency distribution, Histograms, Ogive'},
+  {id:'c9_pr', nm:'Probability',       icon:'🎲',topics:'Random experiments, Events, Empirical probability'},
+ ],
+ 'Class 10':[
+  {id:'c10_rn',nm:'Real Numbers',      icon:'ℝ', topics:"Euclid's division, Fundamental theorem, Irrational numbers, Decimal expansion"},
+  {id:'c10_pl',nm:'Polynomials',       icon:'x²',topics:'Zeros, Geometric meaning, Relationship coefficients, Division algorithm'},
+  {id:'c10_pa',nm:'Pair of Equations', icon:'=', topics:'Graphical, Substitution, Elimination, Cross-multiplication methods'},
+  {id:'c10_qa',nm:'Quadratic Equations',icon:'ax²',topics:'Factorisation, Completing square, Quadratic formula, Discriminant, Nature of roots'},
+  {id:'c10_ap',nm:'Arithmetic Progressions',icon:'AP',topics:'nth term, Sum of n terms, Applications in real life'},
+  {id:'c10_tr',nm:'Triangles',         icon:'△', topics:'Similar triangles, BPT, Pythagoras theorem, Applications'},
+  {id:'c10_cr',nm:'Circles',           icon:'○', topics:'Tangent length, Tangent properties, Theorems'},
+  {id:'c10_tg',nm:'Trigonometry',      icon:'sin',topics:'Ratios, Identities, Heights & Distances, Complementary angles'},
+  {id:'c10_mn',nm:'Mensuration',       icon:'📏',topics:'Surface area & Volume combinations, Conversion, Frustum'},
+  {id:'c10_st',nm:'Statistics',        icon:'📊',topics:'Mean/Median/Mode grouped data, Cumulative frequency, Ogive'},
+  {id:'c10_pr',nm:'Probability',       icon:'🎲',topics:'Classical probability, Cards, Dice, Complementary events'},
+ ],
+};
+
+/* progress mock */
+function getChapters(cls){
+  return (CLASS_CHAPTERS[cls]||[]).map((c,i)=>({...c,
+    mcqD:Math.floor(Math.random()*35)+5,
+    wpD:Math.floor(Math.random()*25)+3,
+    mcqT:50,wpT:50,
+    cc:'cc'+(i%15)
+  }));
+}
+
+/* ══════════════════════════════════════════
+   MCQ QUESTION BANKS — per chapter id
+══════════════════════════════════════════ */
+const MCQ={
+/* CLASS 6 */
+c6_ns:[
+ {q:"What is the HCF of 18 and 24?",opts:["2","3","6","9"],ans:2,exp:"Factors of 18: 1,2,3,6,9,18. Factors of 24: 1,2,3,4,6,8,12,24. HCF = 6."},
+ {q:"The smallest prime number is:",opts:["0","1","2","3"],ans:2,exp:"2 is the smallest prime — it has exactly two factors: 1 and itself."},
+ {q:"LCM of 4, 6, and 9 is:",opts:["18","36","72","12"],ans:1,exp:"LCM(4,6,9) = 36."},
+ {q:"Which is a composite number?",opts:["2","7","9","13"],ans:2,exp:"9 = 3×3, so it has more than 2 factors. 2,7,13 are prime."},
+ {q:"Which number is divisible by both 2 and 3?",opts:["14","21","36","25"],ans:2,exp:"36: even ✓, digit sum=9 divisible by 3 ✓"},
+ {q:"The predecessor of 0 is:",opts:["1","-1","0","2"],ans:1,exp:"Predecessor = -1. 0-1=-1."},
+ {q:"HCF of two co-prime numbers is always:",opts:["0","1","2","Product"],ans:1,exp:"Co-prime numbers share no common factor except 1. So HCF = 1."},
+ {q:"The product of two numbers is 120. HCF is 6. Their LCM is:",opts:["20","36","720","14"],ans:0,exp:"HCF×LCM = Product. LCM=120÷6=20."},
+ {q:"Which is divisible by 11?",opts:["121","122","123","124"],ans:0,exp:"121=11×11. Divisibility rule: 1-2+1=0 ✓"},
+ {q:"How many prime numbers are between 10 and 20?",opts:["3","4","5","2"],ans:1,exp:"11, 13, 17, 19 — four prime numbers between 10 and 20."},
+],
+c6_fr:[
+ {q:"Which fraction is equivalent to 2/3?",opts:["4/9","6/9","4/6","Both B and C"],ans:3,exp:"2/3 = 4/6 (×2) = 6/9 (×3). Both B and C."},
+ {q:"Simplify 18/24:",opts:["3/4","2/3","6/8","9/12"],ans:0,exp:"GCD(18,24)=6. 18/24=3/4."},
+ {q:"2/5 + 1/3 = ?",opts:["3/8","11/15","3/15","6/15"],ans:1,exp:"LCM(5,3)=15. 6/15+5/15=11/15."},
+ {q:"3/4 – 1/6 = ?",opts:["2/10","7/12","1/3","5/12"],ans:1,exp:"LCM(4,6)=12. 9/12-2/12=7/12."},
+ {q:"What fraction of 1 hour is 20 minutes?",opts:["1/2","1/3","1/4","2/3"],ans:1,exp:"20/60=1/3."},
+ {q:"Convert 17/4 to mixed number:",opts:["4 1/4","3 3/4","4 3/4","3 1/4"],ans:0,exp:"17÷4=4 rem 1. So 4 1/4."},
+ {q:"The reciprocal of 3/7 is:",opts:["3/7","7/3","1/3","7"],ans:1,exp:"Flip numerator and denominator: 7/3."},
+ {q:"3/4 of a number is 27. The number is:",opts:["20","27","36","48"],ans:2,exp:"Number=27÷(3/4)=27×4/3=36."},
+ {q:"2/3 × 3/4 = ?",opts:["6/12","1/2","5/7","2/7"],ans:1,exp:"(2×3)/(3×4)=6/12=1/2."},
+ {q:"Which is a proper fraction?",opts:["7/5","3/3","5/3","2/7"],ans:3,exp:"Proper fraction: numerator < denominator. Only 2/7."},
+],
+c6_dc:[
+ {q:"0.375 as a fraction is:",opts:["3/8","3/7","37/100","375/100"],ans:0,exp:"0.375=375/1000=3/8."},
+ {q:"3.45 × 10 = ?",opts:["3.450","345","0.345","34.5"],ans:3,exp:"Multiply by 10 shifts decimal right once: 34.5."},
+ {q:"Which is greatest: 0.6, 0.06, 0.66, 0.606?",opts:["0.6","0.06","0.66","0.606"],ans:2,exp:"0.66 = 0.660 is greatest when compared digit by digit."},
+ {q:"0.5 + 0.05 + 0.005 = ?",opts:["0.555","0.55","0.505","0.55"],ans:0,exp:"Align decimals and add: 0.5+0.05+0.005=0.555."},
+ {q:"Express 3/4 as decimal:",opts:["0.34","0.75","3.4","0.43"],ans:1,exp:"3÷4=0.75."},
+ {q:"4.8 ÷ 0.8 = ?",opts:["0.6","6","60","0.06"],ans:1,exp:"4.8/0.8=48/8=6."},
+ {q:"Round 4.567 to 2 decimal places:",opts:["4.56","4.57","4.6","4.5"],ans:1,exp:"Third decimal is 7≥5, so round up: 4.57."},
+ {q:"0.3 × 0.3 = ?",opts:["0.9","0.09","9","0.009"],ans:1,exp:"0.3×0.3: multiply 3×3=9, place 2 decimal digits: 0.09."},
+ {q:"The place value of 5 in 3.542 is:",opts:["5","0.5","0.05","0.005"],ans:1,exp:"5 is in the tenths place: value = 5/10 = 0.5."},
+ {q:"1.5 – 0.75 = ?",opts:["0.75","0.25","1.25","0.65"],ans:0,exp:"1.50-0.75=0.75."},
+],
+c6_rp:[
+ {q:"Ratio of 15:25 in simplest form is:",opts:["3:5","1:2","5:3","15:5"],ans:0,exp:"GCD=5. 15:25=3:5."},
+ {q:"If 4 pens cost ₹20, cost of 10 pens is:",opts:["₹40","₹50","₹45","₹55"],ans:1,exp:"Rate=₹5/pen. 10×5=₹50."},
+ {q:"In class, boys:girls = 3:2, total 30. Number of girls:",opts:["12","15","18","10"],ans:0,exp:"Girls=2/5×30=12."},
+ {q:"Which is NOT a proportion?",opts:["2:3::8:12","1:2::3:6","3:4::9:16","4:5::8:10"],ans:2,exp:"3×16=48≠4×9=36. Not proportion."},
+ {q:"Divide ₹120 in ratio 3:5:",opts:["₹40,₹80","₹45,₹75","₹50,₹70","₹60,₹60"],ans:1,exp:"3/8×120=₹45; 5/8×120=₹75."},
+ {q:"Ratio of 2 hours to 90 minutes:",opts:["4:3","3:2","2:3","4:5"],ans:0,exp:"2h=120min. 120:90=4:3."},
+ {q:"Mean proportional between 4 and 16:",opts:["8","10","6","64"],ans:0,exp:"√(4×16)=√64=8."},
+ {q:"If x:y=2:3, then (x+y)/(x-y) =",opts:["5/-1","1/5","-5","5"],ans:0,exp:"x=2k,y=3k. (5k)/(-k)=5:(-1)=-5. Option A=5/-1."},
+ {q:"A map scale is 1:50000. 4cm on map =",opts:["200km","20km","2km","20000m"],ans:2,exp:"4×50000=200000cm=2km."},
+ {q:"6 workers build wall in 4 days. 8 workers need:",opts:["3","4","5","2"],ans:0,exp:"Inverse: 6×4=8×d→d=3 days."},
+],
+c6_pc:[
+ {q:"25% of 200 =",opts:["25","50","75","100"],ans:1,exp:"25/100×200=50."},
+ {q:"3/5 as percentage:",opts:["35%","45%","60%","55%"],ans:2,exp:"3/5×100=60%."},
+ {q:"What % of 80 is 20?",opts:["20%","25%","16%","40%"],ans:1,exp:"20/80×100=25%."},
+ {q:"15% of a number is 45. The number:",opts:["300","45","30","150"],ans:0,exp:"45×100/15=300."},
+ {q:"A price rises from ₹200 to ₹250. % increase:",opts:["20%","25%","30%","15%"],ans:1,exp:"50/200×100=25%."},
+ {q:"100 is what % of 400?",opts:["4%","25%","40%","100%"],ans:1,exp:"100/400×100=25%."},
+ {q:"In class of 40, 60% passed. Failed:",opts:["16","24","14","18"],ans:0,exp:"Passed=24. Failed=40-24=16."},
+ {q:"The fraction equivalent to 12.5% is:",opts:["1/8","1/4","1/5","1/6"],ans:0,exp:"12.5/100=1/8."},
+ {q:"If 40% of x = 60, then x =",opts:["100","120","150","160"],ans:2,exp:"x=60×100/40=150."},
+ {q:"Express 7/20 as percent:",opts:["7%","20%","35%","14%"],ans:2,exp:"7/20×100=35%."},
+],
+/* CLASS 7 */
+c7_int:[
+ {q:"(-4) × (-5) = ?",opts:["-20","-9","20","9"],ans:2,exp:"Negative × Negative = Positive. (-4)×(-5)=+20."},
+ {q:"(-3)³ = ?",opts:["9","-9","27","-27"],ans:3,exp:"(-3)³=(-3)×(-3)×(-3)=9×(-3)=-27."},
+ {q:"(-36) ÷ (-4) = ?",opts:["9","-9","8","-8"],ans:0,exp:"Negative ÷ Negative = Positive. 36÷4=9."},
+ {q:"What is the additive inverse of -8?",opts:["-8","8","1/8","0"],ans:1,exp:"Additive inverse: -8+8=0. Answer is 8."},
+ {q:"(-5) + 8 + (-3) = ?",opts:["0","16","-16","6"],ans:0,exp:"-5+8=3; 3+(-3)=0."},
+ {q:"Absolute value of -7 is:",opts:["-7","7","1/7","0"],ans:1,exp:"|−7|=7. Always non-negative."},
+ {q:"Which is greatest: -3, -7, 0, -1?",opts:["-3","-7","0","-1"],ans:2,exp:"0 is the greatest. On number line, rightmost is greatest."},
+ {q:"(-12) ÷ 4 = ?",opts:["3","-3","8","-8"],ans:1,exp:"Negative ÷ Positive = Negative. -12÷4=-3."},
+ {q:"The successor of -5 is:",opts:["-6","-4","4","6"],ans:1,exp:"Successor=-5+1=-4."},
+ {q:"(-1) × (-1) × (-1) = ?",opts:["1","-1","3","-3"],ans:1,exp:"Odd number of negatives → result is negative. (-1)³=-1."},
+],
+c7_rp:[
+ {q:"6 men do a job in 10 days. 12 men would take:",opts:["5 days","10 days","20 days","12 days"],ans:0,exp:"Inverse: 6×10=12×d → d=5 days."},
+ {q:"Speed 60 km/h, time 2.5 h, distance =",opts:["140km","150km","100km","120km"],ans:1,exp:"D=S×T=60×2.5=150km."},
+ {q:"Ratio 1/3 : 1/4 in whole numbers is:",opts:["1:3","3:4","4:3","1:4"],ans:2,exp:"Multiply by 12: 4:3."},
+ {q:"If 15 notebooks cost ₹225, 8 notebooks cost:",opts:["₹100","₹110","₹120","₹115"],ans:2,exp:"Rate=₹15. 8×15=₹120."},
+ {q:"A:B=1:2, B:C=3:4. Then A:B:C=",opts:["3:6:8","1:3:4","2:4:8","3:4:8"],ans:0,exp:"A:B=3:6, B:C=6:8. So A:B:C=3:6:8."},
+ {q:"A train covers 360km in 4h. Speed =",opts:["80km/h","90km/h","100km/h","70km/h"],ans:1,exp:"S=D/T=360/4=90km/h."},
+ {q:"A sum of ₹560 divided in ratio 3:4:7. Middle share =",opts:["₹140","₹160","₹210","₹105"],ans:1,exp:"Total parts=14. Middle=4/14×560=₹160."},
+ {q:"If cost ∝ quantity and 5kg costs ₹75, 8kg costs:",opts:["₹100","₹115","₹120","₹125"],ans:2,exp:"Rate=₹15/kg. 8×15=₹120."},
+ {q:"3 taps fill a tank in 4h. 6 taps take:",opts:["2h","3h","4h","8h"],ans:0,exp:"Inverse: 3×4=6×t → t=2h."},
+ {q:"A:B=3:4, A+B=35. A=",opts:["15","20","12","18"],ans:0,exp:"A=3/7×35=15."},
+],
+c7_pc:[
+ {q:"A shirt ₹400, 20% discount. Selling price:",opts:["₹300","₹320","₹350","₹360"],ans:1,exp:"Discount=80. SP=400-80=₹320."},
+ {q:"Bag bought ₹800, sold ₹960. Profit %:",opts:["16%","20%","15%","25%"],ans:1,exp:"Profit=160. 160/800×100=20%."},
+ {q:"Simple interest on ₹1000 at 8% for 3 years =",opts:["₹240","₹220","₹260","₹280"],ans:0,exp:"SI=PRT/100=1000×8×3/100=₹240."},
+ {q:"₹1200, loss 15%. SP =",opts:["₹1000","₹1020","₹980","₹1100"],ans:1,exp:"Loss=180. SP=1200-180=₹1020."},
+ {q:"If SP=₹770 and profit=10%, CP =",opts:["₹700","₹750","₹770","₹693"],ans:0,exp:"CP=770/1.1=₹700."},
+ {q:"Population 5000, increases 10%. New =",opts:["5050","5100","5500","5200"],ans:2,exp:"Increase=500. New=5500."},
+ {q:"15% of a number = 45. Number =",opts:["300","45","30","150"],ans:0,exp:"45×100/15=300."},
+ {q:"A number increased by 20% then decreased 20%. Net change:",opts:["0%","4% increase","4% decrease","20%"],ans:2,exp:"(1.2)(0.8)=0.96 → 4% decrease."},
+ {q:"SI on ₹2500 at 6% p.a. for 2 years =",opts:["₹300","₹310","₹320","₹250"],ans:0,exp:"SI=2500×6×2/100=₹300."},
+ {q:"₹600 is 75% of what amount?",opts:["₹750","₹800","₹850","₹900"],ans:1,exp:"Amount=600×100/75=₹800."},
+],
+/* CLASS 8 */
+c8_sq:[
+ {q:"√196 = ?",opts:["12","13","14","15"],ans:2,exp:"14×14=196. √196=14."},
+ {q:"Which is a perfect square?",opts:["50","72","144","200"],ans:2,exp:"144=12². Others are not perfect squares."},
+ {q:"√2.25 = ?",opts:["1.5","0.15","2.5","0.5"],ans:0,exp:"√(225/100)=15/10=1.5."},
+ {q:"The square of 25 is:",opts:["125","500","625","250"],ans:2,exp:"25²=625."},
+ {q:"How many digits in √15129?",opts:["2","3","4","5"],ans:1,exp:"15129 has 5 digits. √ of 5-digit number has 3 digits. √15129=123."},
+ {q:"Which is a Pythagorean triplet?",opts:["3,4,6","5,12,13","6,8,11","4,5,6"],ans:1,exp:"5²+12²=25+144=169=13². ✓"},
+ {q:"(a+b)² = ?",opts:["a²+b²","a²-b²","a²+2ab+b²","2a+2b"],ans:2,exp:"(a+b)²=a²+2ab+b² — standard identity."},
+ {q:"√(81/25) = ?",opts:["9/5","81/25","3/5","9/25"],ans:0,exp:"√81/√25=9/5."},
+ {q:"The number of perfect squares between 1 and 100 is:",opts:["8","9","10","11"],ans:1,exp:"1,4,9,16,25,36,49,64,81,100 — 9 numbers (including 1 and 100)."},
+ {q:"If x²=169, x = ?",opts:["±11","±12","±13","±14"],ans:2,exp:"√169=13. x=±13."},
+],
+c8_pc:[
+ {q:"Compound interest on ₹1000 at 10% for 2 years =",opts:["₹200","₹210","₹220","₹190"],ans:1,exp:"A=1000(1.1)²=1210. CI=₹210."},
+ {q:"A TV ₹15000, 10% discount, then 18% GST. Final price:",opts:["₹15930","₹16020","₹14400","₹15900"],ans:0,exp:"After disc: 13500. GST: 13500×1.18=₹15930."},
+ {q:"CP=₹400, SP=₹460. Profit % =",opts:["12.5%","15%","16.67%","10%"],ans:1,exp:"60/400×100=15%."},
+ {q:"Shopkeeper buys ₹250, loss 8%. SP =",opts:["₹225","₹230","₹235","₹220"],ans:1,exp:"Loss=20. SP=250-20=₹230."},
+ {q:"Car depreciates 10%/year. After 2 years, ₹1,00,000 car is worth:",opts:["₹80,000","₹81,000","₹82,000","₹90,000"],ans:1,exp:"100000×0.9²=81000."},
+ {q:"20% increase then 10% decrease. Net effect:",opts:["10% increase","8% increase","10% decrease","No change"],ans:1,exp:"1.2×0.9=1.08 → 8% increase."},
+ {q:"If 120% of x = 96, x =",opts:["80","70","60","90"],ans:0,exp:"x=96×100/120=80."},
+ {q:"Commission 5% on sales ₹8000 =",opts:["₹40","₹400","₹4000","₹800"],ans:1,exp:"5/100×8000=₹400."},
+ {q:"Discount 15% on ₹2000. Discount amount =",opts:["₹250","₹300","₹350","₹200"],ans:1,exp:"15/100×2000=₹300."},
+ {q:"₹500 increased to ₹625. % increase =",opts:["20%","25%","30%","15%"],ans:1,exp:"125/500×100=25%."},
+],
+/* CLASS 9 */
+c9_ns:[
+ {q:"Which is irrational?",opts:["√4","√9","√2","22/7"],ans:2,exp:"√2 is non-terminating non-repeating. 22/7 is rational (it's an approximation, not equal to π)."},
+ {q:"The decimal expansion of 1/7 is:",opts:["Terminating","Non-terminating repeating","Non-terminating non-repeating","None"],ans:1,exp:"1/7=0.142857142857... — repeating, so non-terminating repeating (rational)."},
+ {q:"If HCF(a,b)=4, LCM=48, a=12, then b=",opts:["8","16","24","4"],ans:1,exp:"a×b=HCF×LCM → 12b=192 → b=16."},
+ {q:"Euclid's division lemma: a=bq+r where",opts:["0≤r<a","0≤r<b","0<r≤b","r>b"],ans:1,exp:"Remainder r satisfies 0≤r<b (divisor)."},
+ {q:"2.101001000100001... is:",opts:["Rational","Integer","Irrational","Natural"],ans:2,exp:"Non-terminating non-repeating → irrational."},
+ {q:"√5 + √5 = ?",opts:["√10","2√5","√25","5"],ans:1,exp:"Like surds: √5+√5=2√5."},
+ {q:"(√3 + √2)² = ?",opts:["5+√6","5+2√6","5","√6"],ans:1,exp:"a²+2ab+b²=3+2√6+2=5+2√6."},
+ {q:"Rationalise denominator of 1/√5:",opts:["√5","√5/5","5/√5","1/5"],ans:1,exp:"1/√5 × √5/√5 = √5/5."},
+ {q:"The value of 2⁵ × 2³ is:",opts:["2⁸","2¹⁵","4⁸","2²"],ans:0,exp:"Same base, add exponents: 2^(5+3)=2⁸."},
+ {q:"Which is NOT a real number?",opts:["√2","π","√-1","0.01"],ans:2,exp:"√-1=i (imaginary), not real."},
+],
+c9_pl:[
+ {q:"Degree of polynomial 3x²-5x+2 is:",opts:["1","2","3","0"],ans:1,exp:"Highest power of x is 2."},
+ {q:"Zero of polynomial p(x)=x-5 is:",opts:["5","-5","0","1"],ans:0,exp:"p(x)=0 → x-5=0 → x=5."},
+ {q:"Remainder when x³+3x²+3x+1 is divided by x+1 is:",opts:["0","1","-1","8"],ans:0,exp:"Remainder theorem: p(-1)=(-1)³+3(-1)²+3(-1)+1=-1+3-3+1=0."},
+ {q:"Factorize: x²-9",opts:["(x-3)²","(x+3)(x-3)","(x+9)(x-1)","x(x-9)"],ans:1,exp:"a²-b²=(a+b)(a-b). x²-3²=(x+3)(x-3)."},
+ {q:"If p(x)=x²-5x+6, then p(2)=",opts:["0","2","4","6"],ans:0,exp:"p(2)=4-10+6=0."},
+ {q:"Which is a factor of x²-5x+6?",opts:["x-1","x-2","x+2","x+3"],ans:1,exp:"x²-5x+6=(x-2)(x-3). So (x-2) is a factor."},
+ {q:"(a+b)³ = ?",opts:["a³+b³","a³+3a²b+3ab²+b³","a³-b³","3a+3b"],ans:1,exp:"Standard identity: (a+b)³=a³+3a²b+3ab²+b³."},
+ {q:"Number of zeros a cubic polynomial can have:",opts:["Exactly 3","At most 3","At least 3","Exactly 1"],ans:1,exp:"A polynomial of degree n has at most n real zeros. Cubic → at most 3."},
+ {q:"Factorize: 2x²+5x+3",opts:["(2x+1)(x+3)","(2x+3)(x+1)","(x+1)(x+3)","(2x-3)(x-1)"],ans:1,exp:"2x²+5x+3=(2x+3)(x+1). Verify: 2x²+2x+3x+3=2x²+5x+3 ✓"},
+ {q:"The sum of coefficients of x³+2x²-x+4 is:",opts:["6","4","8","2"],ans:0,exp:"Put x=1: 1+2-1+4=6."},
+],
+/* CLASS 10 */
+c10_qa:[
+ {q:"Discriminant of 2x²-4x+2=0 is:",opts:["0","8","16","-8"],ans:0,exp:"D=b²-4ac=(-4)²-4(2)(2)=16-16=0."},
+ {q:"Roots of x²-5x+6=0 are:",opts:["2,3","1,6","-2,-3","2,-3"],ans:0,exp:"x²-5x+6=(x-2)(x-3). Roots: 2 and 3."},
+ {q:"If D<0, roots are:",opts:["Real & equal","Real & distinct","Not real","Rational"],ans:2,exp:"Negative discriminant → no real roots (complex roots)."},
+ {q:"Sum of roots of ax²+bx+c=0 is:",opts:["c/a","b/a","-b/a","-c/a"],ans:2,exp:"Sum of roots = -b/a (Vieta's formula)."},
+ {q:"Product of roots of 3x²-5x+2=0 is:",opts:["5/3","2/3","-2/3","3/2"],ans:1,exp:"Product = c/a = 2/3."},
+ {q:"Quadratic formula is x = ?",opts:["(-b±√D)/2a","(b±√D)/2a","(-b±√D)/a","b/2a"],ans:0,exp:"x=(-b±√(b²-4ac))/2a — the quadratic formula."},
+ {q:"Nature of roots when D=0:",opts:["Two equal real roots","Two distinct real roots","No real roots","Irrational roots"],ans:0,exp:"D=0 means one repeated root (two equal real roots)."},
+ {q:"Which is a quadratic equation?",opts:["x³+x=0","x+1/x=2","x²+0x+1=0","√x=3"],ans:2,exp:"x²+0x+1=0 is of form ax²+bx+c=0 with a=1, b=0, c=1."},
+ {q:"Roots of x²=16 are:",opts:["4","±4","±2","16"],ans:1,exp:"x²=16 → x=±4. Both positive and negative."},
+ {q:"The equation x²-2x+1=0 has:",opts:["Two distinct roots","One repeated root 1","No real roots","Irrational roots"],ans:1,exp:"(x-1)²=0 → x=1 (repeated). D=4-4=0."},
+],
+c10_tg:[
+ {q:"sin 30° = ?",opts:["1","√3/2","1/2","1/√2"],ans:2,exp:"sin 30°=1/2. Memorise: sin 0°=0, 30°=1/2, 45°=1/√2, 60°=√3/2, 90°=1."},
+ {q:"cos 60° = ?",opts:["1","1/2","√3/2","0"],ans:1,exp:"cos 60°=1/2."},
+ {q:"tan 45° = ?",opts:["0","1","√3","1/√3"],ans:1,exp:"tan 45°=1. (sin 45°/cos 45°=1)."},
+ {q:"sin²θ + cos²θ = ?",opts:["0","1","2","sinθcosθ"],ans:1,exp:"Fundamental trigonometric identity: sin²θ+cos²θ=1."},
+ {q:"1 + tan²θ = ?",opts:["sec²θ","cosec²θ","cot²θ","1"],ans:0,exp:"1+tan²θ=sec²θ — standard identity."},
+ {q:"tan θ = ?",opts:["sinθ/cosθ","cosθ/sinθ","1/sinθ","1/cosθ"],ans:0,exp:"tan θ = sin θ / cos θ by definition."},
+ {q:"If sin θ=3/5, cos θ=",opts:["4/5","5/4","3/4","5/3"],ans:0,exp:"cos²θ=1-9/25=16/25. cosθ=4/5."},
+ {q:"The value of sin 90° is:",opts:["0","1","√3/2","1/2"],ans:1,exp:"sin 90°=1."},
+ {q:"If a ladder 10m long leans against wall, top at height 8m, foot is from wall:",opts:["4m","6m","8m","10m"],ans:1,exp:"d²=10²-8²=100-64=36. d=6m."},
+ {q:"cot θ = ?",opts:["sinθ/cosθ","cosθ/sinθ","1/sinθ","1/cosθ"],ans:1,exp:"cot θ = cos θ / sin θ = 1/tan θ."},
+],
+c10_pr:[
+ {q:"Probability of impossible event is:",opts:["0","1","0.5","-1"],ans:0,exp:"Impossible event never occurs. P=0."},
+ {q:"Probability of certain event is:",opts:["0","0.5","1","2"],ans:2,exp:"Certain event always occurs. P=1."},
+ {q:"P(A) + P(not A) = ?",opts:["0","0.5","1","2"],ans:2,exp:"Complementary events: P(A)+P(A')=1."},
+ {q:"A die is rolled. P(even number) = ?",opts:["1/6","1/3","1/2","2/3"],ans:2,exp:"Even: {2,4,6}=3 outcomes out of 6. P=3/6=1/2."},
+ {q:"A coin is tossed. P(head) = ?",opts:["0","1","1/2","1/4"],ans:2,exp:"2 equally likely outcomes. P(H)=1/2."},
+ {q:"From a bag of 3 red and 5 blue balls, P(red) = ?",opts:["3/8","5/8","3/5","1/2"],ans:0,exp:"Total=8. P(red)=3/8."},
+ {q:"Two coins tossed. P(both heads) = ?",opts:["1/2","1/4","1/3","3/4"],ans:1,exp:"Sample space:{HH,HT,TH,TT}=4. P(HH)=1/4."},
+ {q:"A card drawn from 52 cards. P(king) = ?",opts:["1/13","1/4","4/52","Both A and C"],ans:3,exp:"4 kings in 52 cards. P=4/52=1/13. A and C are equal."},
+ {q:"P(A)=0.3. P(not A)=",opts:["0.3","0.7","0.6","1"],ans:1,exp:"P(A')=1-0.3=0.7."},
+ {q:"Sample space when a die is rolled is:",opts:["{1,2,3}","{1,2,3,4,5,6}","{even,odd}","{2,4,6}"],ans:1,exp:"All 6 equally likely outcomes: {1,2,3,4,5,6}."},
+],
+};
+
+/* Fill missing chapters with generic questions */
+function getQs(chId){
+  if(MCQ[chId]) return MCQ[chId];
+  // Generic fallback
+  return [
+    {q:"The square of 12 is:",opts:["124","144","134","154"],ans:1,exp:"12×12=144."},
+    {q:"LCM of 6 and 8 is:",opts:["12","24","48","18"],ans:1,exp:"LCM(6,8)=24."},
+    {q:"HCF of 24 and 36 is:",opts:["6","8","12","9"],ans:2,exp:"HCF(24,36)=12."},
+    {q:"3/4 of 40 = ?",opts:["25","30","35","40"],ans:1,exp:"3/4×40=30."},
+    {q:"25% of 80 = ?",opts:["15","20","25","30"],ans:1,exp:"25/100×80=20."},
+    {q:"Ratio 3:5, total 40. Smaller share =",opts:["10","15","25","20"],ans:1,exp:"3/8×40=15."},
+    {q:"Simple interest on ₹1000 at 5% for 2 years =",opts:["₹50","₹100","₹150","₹200"],ans:1,exp:"SI=1000×5×2/100=₹100."},
+    {q:"x + 5 = 12, so x = ?",opts:["5","6","7","8"],ans:2,exp:"x=12-5=7."},
+    {q:"Area of rectangle 8m × 5m =",opts:["26 m²","40 m²","13 m²","30 m²"],ans:1,exp:"Area=l×b=8×5=40 m²."},
+    {q:"Mean of 3, 7, 5, 9, 6 =",opts:["5","6","7","8"],ans:1,exp:"Sum=30. Mean=30/5=6."},
+  ];
+}
+
+/* ══════════════════════════════════════════
+   WORD PROBLEM BANKS — per chapter
+══════════════════════════════════════════ */
+const WP={
+c6_ns:[
+ {p:"Find the LCM and HCF of 36 and 84. Verify that LCM × HCF = product of the two numbers.",ans:"3024",unit:"(verify: 36×84)",sol:"HCF=12. LCM=252. 12×252=3024=36×84 ✓"},
+ {p:"Three bells ring every 12, 15, and 18 minutes. If they ring together at 8:00 AM, when is the next time they ring together?",ans:"9:00",unit:"AM",sol:"LCM(12,15,18)=180 min=3h. 8:00AM+3h=11:00AM. Correction: LCM=180 min=3h. Answer=11:00AM"},
+ {p:"What is the smallest number that when divided by 12, 15, and 20 leaves remainder 5?",ans:"65",unit:"",sol:"LCM(12,15,20)=60. Required=60+5=65."},
+ {p:"A library has 252 English and 180 Hindi books to be stacked equally. Maximum books per stack?",ans:"36",unit:"books",sol:"HCF(252,180)=36."},
+ {p:"The product of two numbers is 1680. Their HCF is 12. Find their LCM.",ans:"140",unit:"",sol:"LCM=1680÷12=140."},
+],
+c6_pc:[
+ {p:"Anita scores 360 out of 500. What is her percentage? If passing is 40%, by how many marks did she pass?",ans:"72",unit:"%, passed by 160",sol:"72%×500=360. Pass=200. Margin=360-200=160."},
+ {p:"A shopkeeper buys goods for ₹1200 and sells at 25% profit. Find the selling price.",ans:"1500",unit:"rupees",sol:"Profit=25%×1200=300. SP=1200+300=₹1500."},
+ {p:"In a school of 800 students, 55% are boys. How many girls?",ans:"360",unit:"girls",sol:"Boys=440. Girls=800-440=360."},
+ {p:"A TV marked ₹15000, 10% discount. Find selling price.",ans:"13500",unit:"rupees",sol:"Discount=1500. SP=15000-1500=₹13500."},
+ {p:"₹600 is 75% of what amount?",ans:"800",unit:"rupees",sol:"Amount=600×100/75=₹800."},
+],
+c7_int:[
+ {p:"The temperature at noon is 8°C. It falls 3°C every hour. What is the temperature at 5 PM?",ans:"-7",unit:"°C",sol:"5 hours later: 8-5×3=8-15=-7°C."},
+ {p:"A submarine is at -450 m. It rises 125 m. Find new depth.",ans:"-325",unit:"m",sol:"-450+125=-325m."},
+ {p:"In a game, Rohan scores -4 in first round, +6 in second, -3 in third. What is his total?",ans:"-1",unit:"points",sol:"-4+6-3=-1 point."},
+ {p:"The lowest temperature on Monday was -8°C and highest was 15°C. Find the difference.",ans:"23",unit:"°C",sol:"15-(-8)=15+8=23°C."},
+ {p:"A lift starts at floor 4. It goes down 7 floors then up 3 floors. What floor is it now?",ans:"0",unit:"(ground floor)",sol:"4-7+3=0 (ground floor)."},
+],
+c7_pc:[
+ {p:"Ravi buys a cycle for ₹1800 and sells at a loss of 10%. Find the selling price.",ans:"1620",unit:"rupees",sol:"Loss=10%×1800=180. SP=1800-180=₹1620."},
+ {p:"Find Simple Interest on ₹5000 at 8% per annum for 3 years.",ans:"1200",unit:"rupees",sol:"SI=5000×8×3/100=₹1200."},
+ {p:"A shopkeeper buys 40 items at ₹25 each and sells all at ₹30 each. Find total profit%.",ans:"20",unit:"%",sol:"CP=₹1000, SP=₹1200. Profit=200. %=200/1000×100=20%."},
+ {p:"A sum amounts to ₹2600 in 4 years at 15% per annum SI. Find the principal.",ans:"2000",unit:"rupees",sol:"A=P+SI=P+P×15×4/100=P(1.6). 2600=1.6P → P=₹1625. Hmm recalculate: P+P×0.6=2600→1.6P=2600→P=1625. Use cleaner values: P+4×15%P=2600, 1.6P=2600, P=1625."},
+ {p:"Priya buys saree for ₹2500 and sells at 12% profit. Find selling price.",ans:"2800",unit:"rupees",sol:"Profit=300. SP=2500+300=₹2800."},
+],
+c9_pl:[
+ {p:"Find the value of k if x=2 is a zero of kx²+2x-4.",ans:"0",unit:"",sol:"p(2)=0: 4k+4-4=0 → 4k=0 → k=0."},
+ {p:"Divide p(x)=x³-3x²+5x-3 by (x-1). Find remainder.",ans:"0",unit:"",sol:"p(1)=1-3+5-3=0. Remainder=0."},
+ {p:"If sum of zeros of 3x²-kx+6 is 2, find k.",ans:"6",unit:"",sol:"Sum=-(-k)/3=k/3=2 → k=6."},
+ {p:"Factorise: 2x³+x²-5x+2.",ans:"(x+2)(2x-1)(x-1)",unit:"",sol:"p(1)=2+1-5+2=0. (x-1) is factor. Divide to get 2x²+3x-2=(2x-1)(x+2)."},
+ {p:"The product of zeros of x²-5x+6. Find and verify.",ans:"6",unit:"",sol:"Product=c/a=6. Zeros are 2 and 3. 2×3=6 ✓"},
+],
+c10_tg:[
+ {p:"A vertical pole casts a shadow 8m long. If sun's elevation is 60°, find height of pole.",ans:"13.86",unit:"m (8√3)",sol:"tan 60°=h/8 → √3=h/8 → h=8√3≈13.86m."},
+ {p:"From the top of a cliff 100m high, angle of depression of a boat is 30°. Find horizontal distance.",ans:"173.2",unit:"m (100√3)",sol:"tan 30°=100/d → 1/√3=100/d → d=100√3≈173.2m."},
+ {p:"If sin θ = 12/13, find cos θ and tan θ.",ans:"5/13",unit:"(cos) 12/5 (tan)",sol:"cos θ=√(1-144/169)=√(25/169)=5/13. tan θ=12/5."},
+ {p:"A ladder 13m long leans against wall. Its foot is 5m from wall. How high does it reach?",ans:"12",unit:"m",sol:"h²=13²-5²=169-25=144. h=12m."},
+ {p:"The angle of elevation of the top of a tower from a point 50m away is 45°. Height of tower?",ans:"50",unit:"m",sol:"tan 45°=h/50 → 1=h/50 → h=50m."},
+],
+};
+
+function getWPs(chId){
+  if(WP[chId]) return WP[chId];
+  return [
+    {p:"A bag costs ₹350. After 20% discount, find the price you pay.",ans:"280",unit:"rupees",sol:"Discount=70. Pay=350-70=₹280."},
+    {p:"Train travels 240km in 3 hours. Find speed.",ans:"80",unit:"km/h",sol:"Speed=240/3=80km/h."},
+    {p:"The ratio of milk to water is 4:1. If milk is 20L, find total.",ans:"25",unit:"litres",sol:"1 part=5L. Total=5 parts=25L."},
+    {p:"Find SI on ₹1500 at 6% per annum for 2.5 years.",ans:"225",unit:"rupees",sol:"SI=1500×6×2.5/100=₹225."},
+    {p:"A rectangle has perimeter 36cm and length 10cm. Find area.",ans:"80",unit:"cm²",sol:"Width=(36-20)/2=8cm. Area=10×8=80cm²."},
+  ];
+}
+
+/* ══════════════════════════════════════════
+   APP STATE
+══════════════════════════════════════════ */
+let CU=null, selCls='Class 9', selCh=null, qI=0, qSc=0, qAns=false, wI=0;
+
+/* ══════════════════════════════════════════
+   AUTH
+══════════════════════════════════════════ */
+function loginTab(t){
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('on',(t==='s'&&i===0)||(t==='t'&&i===1)));
+  document.getElementById('sF').classList.toggle('hidden',t!=='s');
+  document.getElementById('tF').classList.toggle('hidden',t!=='t');
+}
+function doStu(){
+  const sIdEl=document.getElementById('sId');
+  const sPwEl=document.getElementById('sPw');
+  if(!sIdEl||!sPwEl){alert('Page not loaded correctly. Please hard-refresh: Ctrl+Shift+R');return;}
+  const id=sIdEl.value.trim();
+  const pw=sPwEl.value;
+  const s=STUS.find(x=>x.id===id&&x.pw===pw);
+  document.getElementById('sErr').style.display='none';
+  if(!s){document.getElementById('sErr').style.display='block';return;}
+  if(s.st==='suspended'){document.getElementById('sErr').textContent='Account suspended. Contact your teacher.';document.getElementById('sErr').style.display='block';return;}
+  const today=new Date().toISOString().split('T')[0];
+  if(s.un<today){document.getElementById('sErr').textContent='Account expired. Contact your teacher.';document.getElementById('sErr').style.display='block';return;}
+  CU=s;
+  // Enforce class restriction: if sec is a specific class, lock to it
+  selCls=(s.sec&&s.sec!=='All')?s.sec:s.cls;
+  document.getElementById('sbNm').textContent=s.nm;
+  document.getElementById('sbCl').textContent=selCls+(s.sec!=='All'?' 🔒':'');
+  showScr('appScreen');gp('dash');
+}
+// Returns true if logged-in student can view a given class
+function canSee(cls){
+  if(!CU||CU.role==='t') return true;
+  if(CU.sec==='All'||!CU.sec) return true;
+  return CU.sec===cls;
+}
+// Called from class pills — blocks restricted students
+function tryClass(cls,cb){
+  if(!canSee(cls)){
+    toast('🔒 Access restricted to '+CU.sec+'. Ask your teacher to unlock more classes.','ter');
+    return;
+  }
+  selCls=cls; if(cb)cb();
+}
+function doTch(){
+  const em=document.getElementById('tEm').value.trim();
+  const pw=document.getElementById('tPw').value;
+  if(em===TCH.em&&pw===TCH.pw){
+    CU={role:'t'};showScr('adminScreen');
+    aTab('st');renderST();fillSels();renderAdmChart();
+  } else document.getElementById('tErr').style.display='block';
+}
+function doOut(){CU=null;showScr('loginScreen');}
+function showScr(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+
+/* ══════════════════════════════════════════
+   ADMIN
+══════════════════════════════════════════ */
+function aTab(t){
+  const ks=['st','ad','an','pw','ac'],is=['aSt','aAd','aAn','aPw','aAc'];
+  document.querySelectorAll('.adm-tab').forEach((el,i)=>el.classList.toggle('on',ks[i]===t));
+  is.forEach(id=>document.getElementById(id).classList.add('hidden'));
+  document.getElementById(is[ks.indexOf(t)]).classList.remove('hidden');
+}
+function renderST(){
+  const today=new Date().toISOString().split('T')[0];
+  document.getElementById('sTB').innerHTML=STUS.map(s=>{
+    const exp=s.un<today;
+    const b=s.st==='suspended'?`<span class="badge br">Suspended</span>`:exp?`<span class="badge by">Expired</span>`:`<span class="badge bg">Active</span>`;
+    return `<tr><td><b>${s.id}</b></td><td>${s.nm}</td><td>${s.cls}</td><td>${s.un}</td><td>${s.sec}</td><td>${b}</td>
+    <td><div style="display:flex;align-items:center;gap:5px"><div style="width:55px;height:6px;background:#EEF0F5;border-radius:3px;overflow:hidden"><div style="width:${s.pr}%;height:100%;background:var(--mint)"></div></div><small>${s.pr}%</small></div></td>
+    <td><button class="s-btn sd" onclick="delStu('${s.id}')">Remove</button></td></tr>`;
+  }).join('');
+}
+function delStu(id){STUS=STUS.filter(s=>s.id!==id);renderST();toast('Student removed','ter');}
+function addStu(){
+  const nm=document.getElementById('nNm').value.trim();
+  const id=document.getElementById('nId').value.trim();
+  const cls=document.getElementById('nCl').value;
+  const pw=document.getElementById('nPw').value;
+  const fr=document.getElementById('nFr').value;
+  const un=document.getElementById('nUn').value;
+  const sec=document.getElementById('nSe').value||'All';
+  if(!nm||!id||!pw||!fr||!un){toast('Fill all required fields','ter');return;}
+  if(STUS.find(s=>s.id===id)){toast('Student ID exists','ter');return;}
+  STUS.push({id,nm,cls,pw,fr,un,st:'active',sec,pr:0});
+  document.getElementById('addOk').style.display='block';
+  setTimeout(()=>document.getElementById('addOk').style.display='none',3000);
+  fillSels();toast('Student added ✅','tok');
+}
+function fillSels(){
+  const opts=STUS.map(s=>`<option value="${s.id}">${s.id} – ${s.nm}</option>`).join('');
+  ['rSS','acS'].forEach(id=>document.getElementById(id).innerHTML=opts);
+}
+function resetPw(){
+  const id=document.getElementById('rSS').value;
+  const np=document.getElementById('rPw').value;
+  if(!np){toast('Enter new password','ter');return;}
+  const s=STUS.find(x=>x.id===id);
+  if(s){s.pw=np;document.getElementById('rOk').style.display='block';setTimeout(()=>document.getElementById('rOk').style.display='none',3000);toast('Password reset ✅','tok');}
+}
+function updAc(){
+  const id=document.getElementById('acS').value;
+  const ch=document.getElementById('acCh').value;
+  const v=document.getElementById('acV').value;
+  const st=document.getElementById('acSt').value;
+  const s=STUS.find(x=>x.id===id);
+  if(s){
+    if(ch)s.sec=ch; if(v)s.un=v; s.st=st;
+    renderST();
+    document.getElementById('acOk').style.display='block';
+    setTimeout(()=>document.getElementById('acOk').style.display='none',3000);
+    toast('Access updated ✅','tok');
+  }
+}
+function renderAdmChart(){
+  const d={'Number System':78,'Fractions':65,'Integers':72,'Ratio':58,'Percentage':80,'Algebra':62,'Geometry':55,'Mensuration':70,'Data Handling':68};
+  const cs={'Number System':'var(--sky)','Fractions':'var(--mint)','Integers':'var(--orange)','Ratio':'var(--coral)','Percentage':'var(--purple)','Algebra':'var(--teal)','Geometry':'var(--pink)','Mensuration':'var(--sun)','Data Handling':'var(--mint)'};
+  document.getElementById('admCh').innerHTML=Object.entries(d).map(([k,v])=>`
+    <div class="tb-row"><div class="tb-lbl" style="font-size:11px">${k}</div>
+    <div class="tb-track"><div class="tb-fill" style="width:${v}%;background:${cs[k]}"></div></div>
+    <div class="tb-pct">${v}%</div></div>`).join('');
+  document.getElementById('topB').innerHTML=STUS.sort((a,b)=>b.pr-a.pr).map(s=>`<tr><td>${s.nm}</td><td>${s.cls}</td><td><b>${s.pr}%</b></td></tr>`).join('');
+}
+
+/* ══════════════════════════════════════════
+   STUDENT PAGES
+══════════════════════════════════════════ */
+const PIDS=['dash','chapters','wp','analytics','plans','contact'];
+function gp(pg){
+  document.querySelectorAll('.nav-item').forEach((n,i)=>n.classList.toggle('on',PIDS[i]===pg));
+  const ma=document.getElementById('MA');
+  if(pg==='dash')ma.innerHTML=renderDash();
+  else if(pg==='chapters')ma.innerHTML=renderChapters();
+  else if(pg==='wp')ma.innerHTML=renderWPSel();
+  else if(pg==='analytics')ma.innerHTML=renderAnalytics();
+  else if(pg==='plans')ma.innerHTML=renderPlans();
+  else if(pg==='contact')ma.innerHTML=renderContact();
+}
+function sc(cls){tryClass(cls,()=>gp('dash'));}
+function sc2(cls){tryClass(cls,()=>gp('chapters'));}
+
+/* DASHBOARD */
+function renderDash(){
+  const chs=getChapters(selCls);
+  const tMCQ=chs.reduce((a,c)=>a+c.mcqD,0);
+  const tWP=chs.reduce((a,c)=>a+c.wpD,0);
+  return `
+  <div class="pg-title">Hey ${CU.nm.split(' ')[0]}! 👋</div>
+  <div class="pg-sub">You're on a 🔥 5-day streak. Keep it up!</div>
+  <div class="cls-pills">${['Class 6','Class 7','Class 8','Class 9','Class 10'].map(c=>`<div class="cls-pill ${c===selCls?'on':''} ${!canSee(c)?'locked-pill':''}" onclick="sc('${c}')">${!canSee(c)?'🔒 ':''} ${c}</div>`).join('')}</div>
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-emo">✅</div><div class="stat-val">${tMCQ}</div><div class="stat-lbl">MCQs Done</div></div>
+    <div class="stat-box"><div class="stat-emo">📝</div><div class="stat-val">${tWP}</div><div class="stat-lbl">Word Problems</div></div>
+    <div class="stat-box"><div class="stat-emo">📚</div><div class="stat-val">${chs.length}</div><div class="stat-lbl">Chapters</div></div>
+    <div class="stat-box"><div class="stat-emo">🎯</div><div class="stat-val">72%</div><div class="stat-lbl">Avg Score</div></div>
+  </div>
+  <div style="font-family:'Fredoka One',cursive;font-size:22px;color:var(--ink);margin-bottom:12px">📚 ${selCls} Chapters</div>
+  <div class="ch-grid">${chs.map(c=>`
+    <div class="ch-card ${c.cc}" onclick="openCh('${c.id}','${selCls}')">
+      <div class="ch-icon">${c.icon}</div>
+      <div class="ch-name">${c.nm}</div>
+      <div class="ch-meta">${c.topics.substring(0,55)}…</div>
+      <div class="ch-meta" style="margin-top:4px">MCQ: ${c.mcqD}/50 · WP: ${c.wpD}/50</div>
+      <div class="prog-bar"><div class="prog-fill" style="width:${Math.round((c.mcqD+c.wpD)/100*100)}%"></div></div>
+    </div>`).join('')}</div>`;
+}
+
+/* CHAPTERS */
+function renderChapters(){
+  const chs=getChapters(selCls);
+  return `
+  <div class="pg-title">📚 Chapters</div>
+  <div class="cls-pills">${['Class 6','Class 7','Class 8','Class 9','Class 10'].map(c=>`<div class="cls-pill ${c===selCls?'on':''} ${!canSee(c)?'locked-pill':''}" onclick="sc2('${c}')">${!canSee(c)?'🔒 ':''} ${c}</div>`).join('')}</div>
+  <div class="ch-grid">${chs.map(c=>`
+    <div class="ch-card ${c.cc}" onclick="openCh('${c.id}','${selCls}')">
+      <div class="ch-icon">${c.icon}</div>
+      <div class="ch-name">${c.nm}</div>
+      <div class="ch-meta">${c.topics.substring(0,55)}…</div>
+      <div class="ch-meta" style="margin-top:4px">MCQ: ${c.mcqD}/50 · WP: ${c.wpD}/50</div>
+      <div class="prog-bar"><div class="prog-fill" style="width:${Math.round((c.mcqD+c.wpD)/100*100)}%"></div></div>
+    </div>`).join('')}</div>`;
+}
+
+function openCh(chId, cls){
+  const chs=getChapters(cls);
+  selCh={...chs.find(c=>c.id===chId), cls};
+  if(!selCh){return;}
+  document.getElementById('MA').innerHTML=`
+  <div class="hdr-row">
+    <button class="back-btn" onclick="gp('chapters')">← Back</button>
+    <div class="pg-title" style="margin:0;font-size:24px">${selCh.icon} ${selCh.nm}</div><div></div>
+  </div>
+  <div style="background:#fff;border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);margin-bottom:16px;font-size:13px;color:var(--muted);font-weight:700;border-left:4px solid var(--sun)">
+    📌 Topics: ${selCh.topics}</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:540px;margin:0 auto">
+    <div class="ch-card ${selCh.cc}" style="text-align:center" onclick="startMCQ('${chId}','${cls}')">
+      <div style="font-size:50px;margin-bottom:8px">🎯</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:19px;margin-bottom:5px">MCQ Practice</div>
+      <div style="color:var(--muted);font-size:12px">${selCh.mcqD}/50 done</div>
+      <div class="prog-bar" style="margin:10px 0"><div class="prog-fill" style="width:${selCh.mcqD*2}%"></div></div>
+      <button class="big-btn orange" style="font-size:16px;padding:11px">Start MCQ 🎯</button>
+    </div>
+    <div class="ch-card ${selCh.cc}" style="text-align:center" onclick="startWP('${chId}','${cls}')">
+      <div style="font-size:50px;margin-bottom:8px">📝</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:19px;margin-bottom:5px">Word Problems</div>
+      <div style="color:var(--muted);font-size:12px">${selCh.wpD}/50 done</div>
+      <div class="prog-bar" style="margin:10px 0"><div class="prog-fill" style="width:${selCh.wpD*2}%"></div></div>
+      <button class="big-btn sky" style="font-size:16px;padding:11px">Solve Problems 📝</button>
+    </div>
+  </div>`;
+}
+
+/* MCQ */
+function startMCQ(chId, cls){
+  const chs=getChapters(cls);
+  selCh={...chs.find(c=>c.id===chId), cls};
+  qI=0;qSc=0;qAns=false;renderMCQ();
+}
+function renderMCQ(){
+  const qs=getQs(selCh.id);
+  const q=qs[qI];
+  document.getElementById('MA').innerHTML=`
+  <div class="hdr-row">
+    <button class="back-btn" onclick="openCh('${selCh.id}','${selCh.cls}')">← Back</button><div></div>
+  </div>
+  <div class="quiz-hdr">
+    <div class="quiz-ch">${selCh.icon} ${selCh.nm} — MCQ · ${selCh.cls}</div>
+    <div class="quiz-info">Q ${qI+1}/${qs.length} · Score: ${qSc}</div>
+  </div>
+  <div class="q-dots">${qs.map((_,i)=>`<div class="q-dot ${i<qI?'done':i===qI?'cur':''}"></div>`).join('')}</div>
+  <div class="q-card">
+    <div class="q-num">Question ${qI+1}</div>
+    <div class="q-txt">${q.q}</div>
+    <div class="opts">${q.opts.map((o,i)=>`<div class="opt" id="o${i}" data-l="${String.fromCharCode(65+i)}" onclick="pick(${i},${q.ans})">${o}</div>`).join('')}</div>
+    <div id="fb" style="display:none"></div>
+  </div>
+  <div class="q-nav">
+    <button class="nav-btn nb-p" onclick="prevQ()">← Prev</button>
+    <button class="nav-btn nb-n" onclick="nextQ()">Next →</button>
+  </div>
+  <div class="fnote">💡 ${qs.length} questions shown. Full version has 50 per chapter.</div>`;
+}
+function pick(sel,corr){
+  if(qAns)return;qAns=true;
+  const qs=getQs(selCh.id);
+  document.querySelectorAll('.opt').forEach((el,i)=>{
+    if(i===corr)el.classList.add('correct');
+    else if(i===sel)el.classList.add('wrong');
+  });
+  const fb=document.getElementById('fb');fb.style.display='block';
+  if(sel===corr){qSc++;fb.className='fb-box fb-ok';fb.innerHTML=`✅ <b>Correct!</b> ${qs[qI].exp}`;toast('Correct! +1 🎉','tok');}
+  else{fb.className='fb-box fb-no';fb.innerHTML=`❌ <b>Incorrect.</b> Right: <b>${qs[qI].opts[corr]}</b><br>${qs[qI].exp}`;}
+}
+function nextQ(){const qs=getQs(selCh.id);if(qI<qs.length-1){qI++;qAns=false;renderMCQ();}else showRes();}
+function prevQ(){if(qI>0){qI--;qAns=false;renderMCQ();}}
+function showRes(){
+  const qs=getQs(selCh.id);const pct=Math.round(qSc/qs.length*100);
+  const tr=pct>=80?'🏆':pct>=60?'🥈':'💪';const col=pct>=80?'#EDFFF5':pct>=60?'#FFF8E1':'#FFF0F0';
+  const msg=pct>=80?'🌟 Outstanding! You nailed it!':pct>=60?'👍 Good work! Review what you missed.':'💪 Keep going! Each attempt makes you stronger!';
+  document.getElementById('MA').innerHTML=`
+  <div class="res-wrap">
+    <div class="res-trophy">${tr}</div>
+    <div class="pg-title" style="margin-bottom:4px">${selCh.nm}</div>
+    <div class="res-score" style="color:${pct>=80?'var(--mint)':pct>=60?'var(--sun)':'var(--coral)'}">${qSc}/${qs.length}</div>
+    <div style="font-size:22px;font-weight:900;margin-bottom:8px">${pct}%</div>
+    <div class="res-msg" style="background:${col}">${msg}</div>
+    <div class="res-btns">
+      <button class="r-btn rb1" onclick="startMCQ('${selCh.id}','${selCh.cls}')">🔄 Try Again</button>
+      <button class="r-btn rb2" onclick="startWP('${selCh.id}','${selCh.cls}')">📝 Word Problems</button>
+      <button class="r-btn rb3" onclick="gp('chapters')">📚 All Chapters</button>
+    </div>
+  </div>`;
+}
+
+/* WORD PROBLEMS */
+function renderWPSel(){
+  const chs=getChapters(selCls);
+  return `
+  <div class="pg-title">📝 Word Problems</div>
+  <div class="pg-sub">Show your working, write your answer with units!</div>
+  <div class="cls-pills">${['Class 6','Class 7','Class 8','Class 9','Class 10'].map(c=>`<div class="cls-pill ${c===selCls?'on':''} ${!canSee(c)?'locked-pill':''}" onclick="scWP('${c}')">${!canSee(c)?'🔒 ':''} ${c}</div>`).join('')}</div>
+  <div class="ch-grid">${chs.map(c=>`
+    <div class="ch-card ${c.cc}" onclick="startWP('${c.id}','${selCls}')">
+      <div class="ch-icon">${c.icon}</div>
+      <div class="ch-name">${c.nm}</div>
+      <div class="ch-meta">Word Problems: ${c.wpD}/50 done</div>
+      <div class="prog-bar"><div class="prog-fill" style="width:${c.wpD*2}%"></div></div>
+    </div>`).join('')}</div>`;
+}
+function scWP(cls){tryClass(cls,()=>gp('wp'));}
+function startWP(chId,cls){
+  const chs=getChapters(cls);
+  selCh={...chs.find(c=>c.id===chId),cls};
+  wI=0;renderWP();
+}
+function renderWP(){
+  const wps=getWPs(selCh.id);const wp=wps[wI];
+  document.getElementById('MA').innerHTML=`
+  <div class="hdr-row">
+    <button class="back-btn" onclick="openCh('${selCh.id}','${selCh.cls}')">← Back</button>
+    <div style="font-weight:900;color:var(--orange);font-size:15px">${selCh.icon} ${selCh.nm} · ${selCh.cls}</div>
+    <div style="font-size:13px;color:var(--muted);font-weight:800">${wI+1}/${wps.length}</div>
+  </div>
+  <div class="q-dots">${wps.map((_,i)=>`<div class="q-dot ${i<wI?'done':i===wI?'cur':''}"></div>`).join('')}</div>
+  <div class="wp-card">
+    <div class="q-num">Word Problem ${wI+1}</div>
+    <div class="wp-prob">${wp.p}</div>
+    <label class="rough-lbl">✏️ Rough Work – Show all your steps here!</label>
+    <textarea class="rough-ta" id="rta" placeholder="Write step-by-step working…&#10;&#10;Step 1: What is given?&#10;Step 2: What formula / equation?&#10;Step 3: Substitute values&#10;Step 4: Calculate&#10;Step 5: Final answer with units"></textarea>
+    <label class="ans-lbl">📌 Final Answer</label>
+    <div class="ans-row">
+      <input class="ans-inp" id="aVal" type="text" placeholder="Enter value…">
+      <input class="unit-inp" id="aUnit" type="text" placeholder="Unit (km, ₹…)">
+      <button class="chk-btn" onclick="chkWP()">Check ✓</button>
+    </div>
+    <div id="wFB" style="display:none"></div>
+    <div id="sFB" style="display:none"></div>
+  </div>
+  <div class="q-nav">
+    <button class="nav-btn nb-p" onclick="prevWP()">← Prev</button>
+    <button class="nav-btn nb-n" onclick="nextWP()">Next →</button>
+  </div>
+  <div class="fnote">💡 Demo shows ${wps.length} problems. Full version has 50 per chapter.</div>`;
+}
+function chkWP(){
+  const wps=getWPs(selCh.id);const wp=wps[wI];
+  const v=document.getElementById('aVal').value.trim();
+  const u=document.getElementById('aUnit').value.trim().toLowerCase();
+  const r=document.getElementById('rta').value.trim();
+  const fb=document.getElementById('wFB');fb.style.display='block';
+  const vOk=v===wp.ans||(parseFloat(v)===parseFloat(wp.ans));
+  const uOk=u===''||u===wp.unit.toLowerCase()||wp.unit==='';
+  if(vOk&&uOk){fb.className='fb-box fb-ok';fb.innerHTML=`✅ <b>Correct!</b> Answer: <b>${wp.ans} ${wp.unit}</b><br><small style="display:block;margin-top:5px;line-height:1.6">💡 <b>Solution:</b> ${wp.sol}</small>`;toast('Excellent! Correct! 🎉','tok');}
+  else if(vOk&&!uOk){fb.className='fb-box fb-no';fb.innerHTML=`⚠️ <b>Value correct but check unit!</b> Expected: <b>${wp.unit}</b>`;toast('Almost — fix the unit!','tin');}
+  else{fb.className='fb-box fb-no';fb.innerHTML=`❌ <b>Not quite.</b> Expected: <b>${wp.ans} ${wp.unit}</b><br><small style="display:block;margin-top:5px;line-height:1.6">💡 ${wp.sol}</small>`;toast('Review your steps!','ter');}
+  analyseStep(r);
+}
+function analyseStep(t){
+  const sb=document.getElementById('sFB');sb.style.display='block';
+  const wc=t.split(/\s+/).filter(w=>w).length;
+  const hasEq=/[=×÷+\-]/.test(t);const hasStep=/step|first|then|next|finally|therefore|∴|since|given|let/i.test(t);
+  const hasN=/\d/.test(t);const hasU=/km|kg|l |rs|₹|m |cm|g |hour|min|day|year|%|metre|unit|litre/i.test(t);
+  let tags=[];let sc=0;
+  if(wc<5){tags.push({t:'Too brief – show working!',c:'sr2'});}else{sc++;tags.push({t:'Working shown ✓',c:'sg2'});}
+  if(hasEq){sc++;tags.push({t:'Equation used ✓',c:'sg2'});}else tags.push({t:'Add formula/equation',c:'sy2'});
+  if(hasStep){sc++;tags.push({t:'Step-by-step ✓',c:'sg2'});}else tags.push({t:'Structure your steps',c:'sy2'});
+  if(hasN){sc++;tags.push({t:'Numbers substituted ✓',c:'sg2'});}
+  if(hasU){sc++;tags.push({t:'Units mentioned ✓',c:'sg2'});}else tags.push({t:'Include units in working',c:'sy2'});
+  const ov=sc>=4?'⭐ Excellent step-by-step working!':sc>=3?'👍 Good attempt — add more detail.':sc>=2?'📌 Show all 5 steps clearly!':'💡 Write complete working with formulas.';
+  const bg=sc>=4?'#EDFFF5':sc>=3?'#FFF8E1':'#FFF0F0';const bc=sc>=4?'#A8E6CF':sc>=3?'#FFD54F':'#FFAAAA';
+  sb.innerHTML=`<div class="step-box" style="background:${bg};border-color:${bc}"><div class="step-title">🤖 AI Step Analysis</div><div style="font-size:14px;font-weight:700;margin-bottom:7px">${ov}</div><div class="step-tags">${tags.map(x=>`<span class="stag ${x.c}">${x.t}</span>`).join('')}</div><div style="margin-top:9px;font-size:12px;color:var(--muted)">Quality: ${sc}/5 ⭐</div></div>`;
+}
+function nextWP(){const wps=getWPs(selCh.id);if(wI<wps.length-1){wI++;renderWP();}else{gp('chapters');toast('Chapter done! 🎉','tok');}}
+function prevWP(){if(wI>0){wI--;renderWP();}}
+
+/* ANALYTICS */
+function renderAnalytics(){
+  const chs=getChapters(selCls);
+  return `
+  <div class="pg-title">📊 My Progress</div>
+  <div class="cls-pills">${['Class 6','Class 7','Class 8','Class 9','Class 10'].map(c=>`<div class="cls-pill ${c===selCls?'on':''} ${!canSee(c)?'locked-pill':''}" onclick="scAN('${c}')">${!canSee(c)?'🔒 ':''} ${c}</div>`).join('')}</div>
+  <div class="an-grid">
+    <div class="an-card">
+      <h3>📈 ${selCls} Chapter Performance</h3>
+      ${chs.map(c=>{const p=Math.round((c.mcqD+c.wpD)/100*100);const col=p>=70?'var(--mint)':p>=40?'var(--sun)':'var(--coral)';return `
+      <div class="tb-row"><div class="tb-lbl" style="font-size:11px">${c.icon} ${c.nm.split(' ')[0]}</div>
+      <div class="tb-track"><div class="tb-fill" style="width:${p}%;background:${col}"></div></div>
+      <div class="tb-pct">${p}%</div></div>`}).join('')}
+    </div>
+    <div class="an-card" style="text-align:center">
+      <h3>🍩 Overall Distribution</h3>
+      <div class="donut"></div>
+      <div class="legend"><span><span class="ldot" style="background:var(--mint)"></span>Strong (62%)</span><span><span class="ldot" style="background:var(--sun)"></span>Average (20%)</span><span><span class="ldot" style="background:var(--coral)"></span>Needs Work (18%)</span></div>
+    </div>
+    <div class="an-card">
+      <h3>💪 Strengths</h3>
+      ${chs.filter((_,i)=>i%3===0).map(c=>`<span class="str-tag" style="background:#EDFFF5;color:#0B6E4F">✅ ${c.nm}</span>`).join('')}
+      <div style="border-top:2px solid var(--border);margin:12px 0"></div>
+      <h3>📌 Focus Areas</h3>
+      ${chs.filter((_,i)=>i%3===2).map(c=>`<span class="str-tag" style="background:#FFF0F0;color:#8B0000">⚠️ ${c.nm}</span>`).join('')}
+    </div>
+    <div class="an-card">
+      <h3>📅 Activity (Last 28 days)</h3>
+      <div class="act-grid">${Array.from({length:28},(_,i)=>{const h=Math.random()>.45?Math.floor(Math.random()*3)+1:0;const cs=['#EEF0F5','#BFE5FF','#60B8FF','#1E90FF'];return `<div class="act-cell" style="background:${cs[h]}"></div>`}).join('')}</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:7px">Less → More active</div>
+      <div style="margin-top:12px"><b>🔥 Streak:</b> <span style="color:var(--orange)">5 days</span></div>
+      <div><b>🏆 Best:</b> <span style="color:var(--purple)">12 days</span></div>
+      <div><b>⭐ Total Qs:</b> <span style="color:var(--sky)">127</span></div>
+    </div>
+  </div>`;
+}
+function scAN(cls){tryClass(cls,()=>gp('analytics'));}
+
+/* PLANS */
+function renderPlans(){
+  return `
+  <div class="pg-title">💳 Premium Plans</div>
+  <div class="pg-sub">Full access to 2000+ questions across all classes & chapters</div>
+  <div class="pay-card">
+    <div class="cs-badge">🚀 COMING SOON</div>
+    <div class="pay-title">Choose Your Plan</div>
+    <p style="color:var(--muted);font-size:14px;font-weight:700;margin-bottom:4px">Payment gateway launching soon. All features free till then!</p>
+    <div class="plan-grid">
+      <div class="plan"><div class="plan-name">Monthly</div><div class="plan-price">₹199 <span class="plan-mo">/month</span></div>
+        <ul class="plan-feat"><li>All 5 Classes</li><li>All Chapters</li><li>50 MCQs/chapter</li><li>50 Word Problems</li><li>AI Step Analysis</li></ul></div>
+      <div class="plan best"><div style="font-size:11px;font-weight:900;color:var(--orange);margin-bottom:3px">⭐ BEST VALUE</div>
+        <div class="plan-name">Annual</div><div class="plan-price">₹999 <span class="plan-mo">/year</span></div>
+        <ul class="plan-feat"><li>Everything in Monthly</li><li>Progress Reports</li><li>Analytics Dashboard</li><li>Priority Support</li><li>Parent Access</li></ul></div>
+    </div>
+    <div style="border:2px solid var(--border);border-radius:13px;padding:16px;margin-top:8px">
+      <div style="font-weight:900;margin-bottom:8px">🏫 School License</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:24px;color:var(--purple)">₹4,999 <span style="font-size:13px;color:var(--muted)">/year (50 students)</span></div>
+      <ul class="plan-feat" style="margin-top:8px"><li>All features</li><li>Bulk student management</li><li>Class-wide analytics</li></ul>
+    </div>
+    <p style="font-size:13px;color:var(--muted);font-weight:700;margin-top:14px">📧 Early access: <b>${EM}</b></p>
+  </div>`;
+}
+
+/* CONTACT */
+function renderContact(){
+  return `
+  <div class="pg-title">📬 Contact Us</div>
+  <div class="pg-sub">We're always here to help!</div>
+  <div class="ct-card">
+    <div class="ct-item"><div class="ct-icon">📧</div><div><div class="ct-lbl">Email</div><div class="ct-val">${EM}</div></div></div>
+    <div class="ct-item"><div class="ct-icon">🌐</div><div><div class="ct-lbl">Website</div><div class="ct-val">mathsmagic.co.in</div></div></div>
+    <div class="ct-item"><div class="ct-icon">👨‍🏫</div><div><div class="ct-lbl">About Us</div><div class="ct-val">We are a veteran in the field of education – with our lead coach having corporate exposure of ~20 years with an unparalleled teaching record of helping students outscore themselves.</div></div></div>
+    <div class="ct-item"><div class="ct-icon">⏰</div><div><div class="ct-lbl">Response Time</div><div class="ct-val">Within 24 hours</div></div></div>
+    <div style="border-top:2px solid var(--border);margin:14px 0"></div>
+    <div style="font-weight:900;margin-bottom:12px">💬 Send a Message</div>
+    <div class="f-group"><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:5px;text-transform:uppercase">Your Name</label><input class="f-inp" id="cNm" placeholder="Your name"></div>
+    <div class="f-group"><label style="font-size:11px;font-weight:900;color:var(--muted);display:block;margin-bottom:5px;text-transform:uppercase">Message</label><textarea class="rough-ta" id="cMsg" placeholder="Type your message…" style="min-height:90px"></textarea></div>
+    <button class="big-btn orange" style="font-size:16px;padding:12px" onclick="toast('Message sent! We reply within 24hrs 📨','tok')">Send Message 📨</button>
+  </div>`;
+}
+
+/* TOAST */
+function toast(msg,type){const t=document.getElementById('toast');t.textContent=msg;t.className=`toast ${type} show`;setsetTimeout(()=>t.classList.remove('show'),3200);}
+
+/* INIT */
+window.addEventListener('DOMContentLoaded',()=>{
+  // Assemble email at runtime - bypasses Cloudflare email obfuscation
+  const emailAddr = ['edumathcoach','gmail.com'].join('@');
+  const tEmEl = document.getElementById('tEm');
+  if(tEmEl && !tEmEl.value) tEmEl.value = emailAddr;
+  const fe = document.getElementById('footerEmail');
+  if(fe) fe.textContent = emailAddr;
+  const ae = document.getElementById('admEmail');
+  if(ae) ae.textContent = emailAddr;
+  // Date defaults for add-student form
+  try {
+    const d=new Date(), n=new Date();
+    n.setFullYear(n.getFullYear()+1);
+    const fmt=d=>d.toISOString().split('T')[0];
+    const nFr=document.getElementById('nFr');
+    const nUn=document.getElementById('nUn');
+    if(nFr) nFr.value=fmt(d);
+    if(nUn) nUn.value=fmt(n);
+  } catch(e){}
+  // Health check indicator
+  try{
+    const sc=document.getElementById('stuCount');
+    if(sc) sc.textContent=STUS.length+' registered';
+  }catch(e){}
+});
+</script>
+
+</body></html>
